@@ -1,0 +1,2015 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#f7f2eb">
+<meta name="description" content="Mount Exports, established in 1996, is an Indian natural stone exporter specializing in Marble, Granite, Patagonia and Exotic Stones. Own Titanium Gold Quarry in Rajasthan.">
+<title>Mount Exports | Premium Natural Stones Since 1996</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg: #f7f2eb;
+  --bg-light: #fbf8f3;
+  --brown: #382317;
+  --brown-light: #65482e;
+  --gold: #a47a45;
+  --gold-light: #c6a779;
+  --border: #dfd2c0;
+  --text: #34271e;
+  --muted: #776b60;
+  --white: #fffdf9;
+  --serif: 'Playfair Display', Georgia, serif;
+  --sans: 'DM Sans', Arial, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 85px;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--sans);
+  overflow-x: hidden;
+}
+
+button, input, select, textarea {
+  font: inherit;
+}
+
+button, a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+.container {
+  width: min(1380px, 92%);
+  margin: auto;
+}
+
+.section {
+  padding: 76px 0;
+  position: relative;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 34px;
+  position: relative;
+  z-index: 2;
+}
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+  color: var(--brown-light);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 9px;
+}
+
+.eyebrow::before,
+.eyebrow::after {
+  content: "";
+  width: 42px;
+  height: 1px;
+  background: var(--gold-light);
+}
+
+.section-heading h2 {
+  font-family: var(--serif);
+  font-size: clamp(27px, 3vw, 39px);
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--brown);
+}
+
+.section-heading p {
+  font-size: 13px;
+  color: var(--muted);
+  margin-top: 10px;
+  line-height: 1.7;
+}
+
+/* HEADER */
+
+.header {
+  height: 78px;
+  background: rgba(250,247,241,.97);
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(164,122,69,.15);
+}
+
+.nav-wrap {
+  width: min(1380px, 92%);
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  flex-shrink: 0;
+}
+
+.brand-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.brand-logo svg {
+  width: 72px;
+  height: 33px;
+  margin-bottom: -2px;
+}
+
+.brand-name {
+  font-family: var(--serif);
+  font-size: 19px;
+  font-weight: 700;
+  color: var(--brown);
+  letter-spacing: .6px;
+}
+
+.brand-tagline {
+  font-size: 7px;
+  letter-spacing: .7px;
+  color: var(--brown-light);
+  font-weight: 600;
+  margin-top: 2px;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: clamp(20px, 3vw, 42px);
+}
+
+.nav-menu a {
+  font-family: var(--serif);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--brown);
+  position: relative;
+  padding: 8px 0;
+  white-space: nowrap;
+}
+
+.nav-menu a:not(.nav-cta)::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--gold);
+  transition: .3s;
+}
+
+.nav-menu a:hover::after {
+  width: 100%;
+}
+
+.nav-cta {
+  border: 1px solid var(--gold-light);
+  padding: 10px 23px !important;
+  transition: .3s;
+}
+
+.nav-cta:hover {
+  background: var(--brown);
+  color: white;
+  border-color: var(--brown);
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: 0;
+  color: var(--brown);
+  cursor: pointer;
+}
+
+/* HERO */
+
+.hero {
+  height: 395px;
+  min-height: 360px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #8c7863;
+}
+
+.hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(27,19,13,.32), rgba(247,240,228,.43), rgba(27,19,13,.22)),
+    rgba(245,237,224,.13);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  width: min(720px, 90%);
+  padding: 30px 0;
+}
+
+.hero-label {
+  font-size: 10px;
+  letter-spacing: 4px;
+  font-weight: 700;
+  color: #412d1d;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  font-family: var(--serif);
+  font-size: clamp(37px, 5vw, 60px);
+  line-height: 1.04;
+  color: #342116;
+  font-weight: 600;
+  text-shadow: 0 2px 15px rgba(255,255,255,.35);
+}
+
+.hero-description {
+  font-family: var(--serif);
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 13px auto 18px;
+  color: #38291e;
+}
+
+.primary-btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  background: linear-gradient(135deg, #76502b, #54371f);
+  color: white;
+  padding: 12px 27px;
+  border: 1px solid rgba(255,255,255,.2);
+  font-family: var(--serif);
+  font-size: 13px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.primary-btn:hover {
+  background: #342116;
+  transform: translateY(-2px);
+}
+
+.hero-dots {
+  display: flex;
+  gap: 11px;
+  justify-content: center;
+  margin-top: 29px;
+}
+
+.hero-dots span {
+  width: 7px;
+  height: 7px;
+  border: 1px solid #75542f;
+  border-radius: 50%;
+}
+
+.hero-dots span:first-child {
+  background: #75542f;
+}
+
+/* MOUNTAIN BACKGROUND */
+
+.mountain-bg {
+  position: relative;
+  isolation: isolate;
+}
+
+.mountain-bg::before,
+.mountain-bg::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 0;
+  height: 180px;
+  pointer-events: none;
+  opacity: .28;
+  background: #d8cbbb;
+  clip-path: polygon(
+    0 83%, 6% 58%, 10% 71%, 16% 25%,
+    22% 70%, 29% 48%, 34% 80%, 43% 35%,
+    49% 69%, 57% 47%, 64% 82%, 72% 32%,
+    79% 72%, 87% 42%, 94% 76%, 100% 53%,
+    100% 100%, 0 100%
+  );
+}
+
+.mountain-bg::before {
+  top: 0;
+}
+
+.mountain-bg::after {
+  bottom: 0;
+  transform: scaleX(-1);
+  opacity: .16;
+}
+
+/* CATEGORY SECTION */
+
+.products-section {
+  padding-top: 49px;
+  padding-bottom: 50px;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 17px;
+  position: relative;
+  z-index: 2;
+}
+
+.category-card {
+  background: var(--bg-light);
+  border: 1px solid rgba(129,99,64,.22);
+  border-radius: 9px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: .35s;
+  box-shadow: 0 5px 15px rgba(52,35,20,.055);
+}
+
+.category-card:hover,
+.category-card.active {
+  transform: translateY(-5px);
+  border-color: var(--gold);
+  box-shadow: 0 12px 25px rgba(52,35,20,.12);
+}
+
+.category-card img {
+  height: 150px;
+  object-fit: cover;
+  transition: transform .6s;
+}
+
+.category-card:hover img {
+  transform: scale(1.045);
+}
+
+.category-footer {
+  min-height: 43px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 10px;
+  position: relative;
+}
+
+.category-symbol {
+  color: var(--gold);
+  font-size: 20px;
+  line-height: 1;
+}
+
+.category-footer h3 {
+  font-family: var(--serif);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--brown);
+}
+
+.category-arrow {
+  font-size: 19px;
+  color: var(--gold);
+  transition: .3s;
+}
+
+.category-card:hover .category-arrow {
+  transform: translateX(5px);
+}
+
+/* FEATURED GALLERY */
+
+.featured-section {
+  padding-top: 15px;
+  padding-bottom: 45px;
+}
+
+.gallery-shell {
+  position: relative;
+}
+
+.gallery-track {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 10px;
+  overflow: hidden;
+}
+
+.gallery-item {
+  height: 135px;
+  overflow: hidden;
+  border-radius: 5px;
+  border: 1px solid rgba(90,65,38,.25);
+  background: #e5ddd2;
+  cursor: pointer;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .6s;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.07);
+}
+
+.gallery-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 10px;
+}
+
+.gallery-arrow {
+  background: none;
+  border: 0;
+  font-size: 26px;
+  color: var(--brown);
+  cursor: pointer;
+  transition: .2s;
+}
+
+.gallery-arrow:hover {
+  color: var(--gold);
+  transform: scale(1.15);
+}
+
+.gallery-dots {
+  display: flex;
+  gap: 9px;
+}
+
+.gallery-dots button {
+  width: 7px;
+  height: 7px;
+  background: transparent;
+  border: 1px solid var(--gold);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.gallery-dots button.active {
+  background: var(--gold);
+}
+
+.gallery-note {
+  text-align: center;
+  font-size: 10px;
+  letter-spacing: 1px;
+  color: var(--muted);
+  margin-top: 12px;
+  text-transform: uppercase;
+}
+
+/* PRODUCT NAMES */
+
+.product-names {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  margin-top: 23px;
+}
+
+.product-names span {
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,.45);
+  color: var(--brown-light);
+  padding: 7px 13px;
+  font-size: 11px;
+}
+
+/* PROJECTS */
+
+.projects-section {
+  padding-top: 24px;
+  padding-bottom: 42px;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.project-card {
+  height: 175px;
+  overflow: hidden;
+  border-radius: 5px;
+  position: relative;
+  background: #d7c9b7;
+}
+
+.project-card img {
+  height: 100%;
+  object-fit: cover;
+  transition: transform .7s;
+}
+
+.project-card:hover img {
+  transform: scale(1.06);
+}
+
+.project-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(transparent 45%, rgba(29,20,13,.7));
+  display: flex;
+  align-items: flex-end;
+  padding: 15px;
+  color: white;
+  opacity: .95;
+}
+
+.project-overlay h3 {
+  font-family: var(--serif);
+  font-size: 17px;
+  font-weight: 500;
+}
+
+/* INFRASTRUCTURE */
+
+.infrastructure-section {
+  padding: 54px 0;
+  background: #eee5d9;
+  border-top: 1px solid rgba(164,122,69,.16);
+  border-bottom: 1px solid rgba(164,122,69,.16);
+}
+
+.infra-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+}
+
+.infra-card {
+  padding: 29px;
+  border: 1px solid #d8c6ae;
+  background: rgba(255,253,249,.65);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 205px;
+}
+
+.infra-number {
+  color: var(--gold);
+  font-size: 11px;
+  letter-spacing: 3px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.infra-card h3 {
+  font-family: var(--serif);
+  font-size: 25px;
+  color: var(--brown);
+  margin-bottom: 11px;
+}
+
+.infra-card p {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.9;
+}
+
+.infra-card .infra-detail {
+  margin-top: 14px;
+  font-size: 11px;
+  color: var(--brown-light);
+  letter-spacing: .4px;
+  line-height: 1.8;
+}
+
+/* WHY CHOOSE / ABOUT */
+
+.why-section {
+  padding: 54px 0 43px;
+}
+
+.about-copy {
+  max-width: 770px;
+  margin: -15px auto 30px;
+  text-align: center;
+  font-size: 13px;
+  line-height: 1.9;
+  color: var(--muted);
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.why-card {
+  text-align: center;
+  padding: 15px 10px;
+  position: relative;
+}
+
+.why-card:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 30px;
+  height: 36px;
+  width: 1px;
+  background: #cbb99f;
+}
+
+.why-icon {
+  height: 38px;
+  width: 38px;
+  margin: auto auto 10px;
+  color: var(--gold);
+}
+
+.why-card h3 {
+  font-family: var(--serif);
+  color: var(--brown);
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+
+.why-card p {
+  font-size: 11px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* CONTACT */
+
+.contact-section {
+  background: #eee4d8;
+  position: relative;
+  overflow: hidden;
+  padding: 43px 0;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: .85fr 1.15fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.contact-left .eyebrow {
+  justify-content: flex-start;
+}
+
+.contact-left .eyebrow::after {
+  display: none;
+}
+
+.contact-left h2 {
+  font-family: var(--serif);
+  color: var(--brown);
+  font-size: clamp(28px, 3vw, 39px);
+  line-height: 1.15;
+  margin-bottom: 13px;
+}
+
+.contact-left p {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.8;
+  max-width: 390px;
+}
+
+.contact-details {
+  margin-top: 23px;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.contact-details a,
+.contact-details div {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  font-size: 12px;
+  color: var(--brown-light);
+}
+
+.contact-details svg {
+  width: 17px;
+  height: 17px;
+  flex-shrink: 0;
+  color: var(--gold);
+}
+
+.enquiry-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 9px 13px;
+}
+
+.enquiry-form input,
+.enquiry-form select,
+.enquiry-form textarea {
+  width: 100%;
+  min-width: 0;
+  background: rgba(255,255,255,.62);
+  border: 1px solid #d1c4b5;
+  outline: none;
+  padding: 12px 13px;
+  font-size: 11px;
+  color: var(--brown);
+  border-radius: 4px;
+  transition: .2s;
+}
+
+.enquiry-form input:focus,
+.enquiry-form select:focus,
+.enquiry-form textarea:focus {
+  border-color: var(--gold);
+  background: white;
+}
+
+.enquiry-form input::placeholder,
+.enquiry-form textarea::placeholder {
+  color: #80766d;
+}
+
+.enquiry-form textarea {
+  grid-column: 1 / -1;
+  min-height: 67px;
+  resize: vertical;
+}
+
+.full-width {
+  grid-column: 1 / -1;
+}
+
+.submit-wrap {
+  grid-column: 1 / -1;
+  text-align: center;
+}
+
+.submit-btn {
+  background: linear-gradient(135deg, #80572e, #50351e);
+  border: 0;
+  color: white;
+  padding: 12px 35px;
+  cursor: pointer;
+  font-family: var(--serif);
+  font-size: 13px;
+  transition: .3s;
+}
+
+.submit-btn:hover {
+  background: var(--brown);
+  transform: translateY(-2px);
+}
+
+.form-note {
+  font-size: 10px;
+  color: var(--muted);
+  margin-top: 9px;
+}
+
+/* FOOTER */
+
+.footer {
+  background: #f8f3ec;
+  padding: 25px 0;
+  border-top: 1px solid var(--border);
+}
+
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.footer-brand {
+  flex-shrink: 0;
+}
+
+.footer-nav {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  border-left: 1px solid #bda98d;
+  padding-left: 35px;
+}
+
+.footer-nav a {
+  font-family: var(--serif);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--brown);
+}
+
+.footer-nav a:hover {
+  color: var(--gold);
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.socials a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #eee7dd;
+  color: var(--brown);
+  transition: .3s;
+}
+
+.socials a:hover {
+  background: var(--brown);
+  color: white;
+}
+
+.socials svg {
+  width: 14px;
+  height: 14px;
+}
+
+.footer-bottom {
+  border-top: 1px solid #e3d9cd;
+  margin-top: 19px;
+  padding-top: 13px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  color: var(--muted);
+  font-size: 10px;
+}
+
+/* FLOATING CONTACT */
+
+.floating-contact {
+  position: fixed;
+  right: 17px;
+  bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 999;
+}
+
+.float-btn {
+  width: 43px;
+  height: 43px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,.16);
+  transition: .3s;
+}
+
+.float-btn:hover {
+  transform: scale(1.1);
+}
+
+.float-btn svg {
+  width: 22px;
+  height: 22px;
+}
+
+.whatsapp-btn {
+  background: #20c765;
+}
+
+.call-btn {
+  background: #91683c;
+}
+
+/* ANIMATIONS */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity .7s ease, transform .7s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    transition-duration: .01ms !important;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* RESPONSIVE */
+
+@media (min-width: 1500px) {
+  .hero { height: 480px; }
+  .category-card img { height: 185px; }
+  .gallery-item { height: 165px; }
+  .project-card { height: 220px; }
+}
+
+@media (max-width: 950px) {
+  .nav-menu { gap: 18px; }
+  .nav-menu a { font-size: 12px; }
+  .nav-cta { padding: 9px 12px !important; }
+  .category-card img { height: 125px; }
+  .gallery-item { height: 115px; }
+  .project-card { height: 150px; }
+  .footer-nav { gap: 14px; padding-left: 20px; }
+}
+
+@media (max-width: 700px) {
+  .header { height: 69px; }
+  .brand-logo svg { width: 61px; height: 28px; }
+  .brand-name { font-size: 17px; }
+  .brand-tagline { font-size: 6px; }
+  .menu-toggle { display: block; }
+  .menu-toggle svg { width: 27px; height: 27px; }
+
+  .nav-menu {
+    position: absolute;
+    top: 68px;
+    left: 0;
+    width: 100%;
+    padding: 15px 5% 22px;
+    background: #faf7f1;
+    border-top: 1px solid var(--border);
+    box-shadow: 0 12px 20px rgba(40,25,12,.08);
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 3px;
+  }
+
+  .nav-menu.open { display: flex; }
+
+  .nav-menu a {
+    padding: 11px 5px;
+    border-bottom: 1px solid rgba(164,122,69,.12);
+    font-size: 14px;
+  }
+
+  .nav-menu a::after { display: none; }
+  .nav-cta { text-align: center; margin-top: 9px; }
+
+  .hero {
+    height: 410px;
+    min-height: 410px;
+  }
+
+  .hero-video { object-position: center; }
+  .hero h1 { font-size: clamp(36px, 9vw, 49px); }
+  .hero-description { font-size: 13px; }
+  .hero-label { font-size: 9px; letter-spacing: 3px; }
+
+  .section { padding: 54px 0; }
+  .products-section { padding-top: 42px; padding-bottom: 35px; }
+
+  .section-heading { margin-bottom: 25px; }
+  .section-heading h2 { font-size: 28px; }
+  .section-heading p { font-size: 12px; }
+
+  .category-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .category-card img { height: 120px; }
+  .category-footer { min-height: 42px; }
+  .category-footer h3 { font-size: 13px; }
+
+  .featured-section { padding-top: 12px; }
+  .gallery-track {
+    display: flex;
+    overflow-x: auto;
+    scrollbar-width: none;
+    scroll-snap-type: x mandatory;
+  }
+
+  .gallery-track::-webkit-scrollbar { display: none; }
+
+  .gallery-item {
+    flex: 0 0 48%;
+    height: 125px;
+    scroll-snap-align: start;
+  }
+
+  .gallery-note { font-size: 9px; }
+  .product-names { gap: 7px; }
+  .product-names span { font-size: 10px; padding: 6px 9px; }
+
+  .projects-section { padding-top: 18px; }
+  .project-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .project-card { height: 205px; }
+
+  .infra-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .infra-card {
+    min-height: 180px;
+    padding: 23px;
+  }
+
+  .infra-card h3 { font-size: 22px; }
+  .about-copy { font-size: 12px; }
+
+  .why-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px 5px;
+  }
+
+  .why-card:not(:last-child)::after { display: none; }
+  .why-card { border-bottom: 1px solid #dfd2c0; }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .contact-left h2 { font-size: 31px; }
+  .contact-left p { font-size: 12px; }
+  .contact-details { gap: 13px; }
+
+  .enquiry-form { gap: 9px; }
+  .enquiry-form input,
+  .enquiry-form select,
+  .enquiry-form textarea { font-size: 11px; padding: 12px 10px; }
+
+  .footer-inner {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .footer-nav {
+    border-left: 0;
+    border-top: 1px solid var(--border);
+    padding: 16px 0 0;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 17px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    line-height: 1.6;
+  }
+
+  .floating-contact {
+    right: 12px;
+    bottom: 15px;
+  }
+
+  .float-btn { width: 42px; height: 42px; }
+}
+
+@media (max-width: 370px) {
+  .container { width: 94%; }
+  .category-card img { height: 105px; }
+  .category-footer { gap: 7px; }
+  .category-footer h3 { font-size: 12px; }
+  .enquiry-form { grid-template-columns: 1fr; }
+  .enquiry-form textarea,
+  .submit-wrap { grid-column: 1; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header class="header">
+  <div class="nav-wrap">
+
+    <a href="#home" class="brand">
+      <div class="brand-logo">
+        <svg viewBox="0 0 100 46" fill="none">
+          <path d="M8 39 L43 6 L61 24 L71 14 L96 39"
+            stroke="#9b713d" stroke-width="4" stroke-linecap="square"/>
+          <path d="M34 39 L43 30 L52 39"
+            stroke="#9b713d" stroke-width="3"/>
+          <path d="M57 39 L71 26 L84 39"
+            stroke="#9b713d" stroke-width="3"/>
+        </svg>
+        <span class="brand-name">MOUNT EXPORTS</span>
+        <span class="brand-tagline">MARBLE | GRANITE | PATAGONIA | EXOTIC STONE</span>
+      </div>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+        <path d="M3 6h18M3 12h18M3 18h18"/>
+      </svg>
+    </button>
+
+    <nav class="nav-menu" id="navMenu">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#products">Products</a>
+      <a href="#projects">Projects</a>
+      <a href="#infrastructure">Infrastructure</a>
+      <a href="#contact">Contact</a>
+      <a href="#contact" class="nav-cta">Request a Quote&nbsp; →</a>
+    </nav>
+
+  </div>
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+  <video class="hero-video"
+    autoplay muted loop playsinline preload="metadata"
+    poster="e1.jpeg">
+    <source src="hero.mp4" type="video/mp4">
+  </video>
+
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+
+    <div class="hero-label">NATURAL STONE EXPORTER</div>
+
+    <h1>Premium Stones<br>for Timeless Spaces</h1>
+
+    <p class="hero-description">
+      Sourcing, Processing & Exporting the Finest<br>
+      Natural Stones from India
+    </p>
+
+    <a href="#products" class="primary-btn">
+      Explore Collection <span>→</span>
+    </a>
+
+    <div class="hero-dots">
+      <span></span><span></span><span></span>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- PRODUCTS / CATEGORIES -->
+
+<section class="section products-section mountain-bg" id="products">
+
+  <div class="container">
+
+    <div class="section-heading reveal">
+      <div class="eyebrow">OUR PRODUCTS</div>
+      <h2>Explore Our Stone Collection</h2>
+    </div>
+
+    <div class="category-grid">
+
+      <article class="category-card reveal" data-category="marble">
+        <img src="marble1.jpeg" alt="Premium Indian Marble" loading="lazy">
+        <div class="category-footer">
+          <span class="category-symbol">◈</span>
+          <h3>Marble</h3>
+          <span class="category-arrow">→</span>
+        </div>
+      </article>
+
+      <article class="category-card reveal" data-category="granite">
+        <img src="g1.jpeg" alt="Natural Indian Granite" loading="lazy">
+        <div class="category-footer">
+          <span class="category-symbol">◈</span>
+          <h3>Granite</h3>
+          <span class="category-arrow">→</span>
+        </div>
+      </article>
+
+      <article class="category-card reveal" data-category="patagonia">
+        <img src="p1.jpeg" alt="Exotic Patagonia Quartzite" loading="lazy">
+        <div class="category-footer">
+          <span class="category-symbol">◈</span>
+          <h3>Patagonia</h3>
+          <span class="category-arrow">→</span>
+        </div>
+      </article>
+
+      <article class="category-card reveal" data-category="exotic">
+        <img src="e1.jpeg" alt="Exotic Natural Stones" loading="lazy">
+        <div class="category-footer">
+          <span class="category-symbol">◈</span>
+          <h3>Exotic Stone</h3>
+          <span class="category-arrow">→</span>
+        </div>
+      </article>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- FEATURED COLLECTION -->
+
+<section class="section featured-section mountain-bg">
+
+  <div class="container">
+
+    <div class="section-heading reveal">
+      <div class="eyebrow">FEATURED COLLECTION</div>
+      <h2>Handpicked for Global Spaces</h2>
+    </div>
+
+    <div class="gallery-shell reveal">
+
+      <div class="gallery-track" id="galleryTrack">
+
+        <div class="gallery-item">
+          <img src="marble1.jpeg" alt="Marble collection" loading="lazy">
+        </div>
+
+        <div class="gallery-item">
+          <img src="g1.jpeg" alt="Granite collection" loading="lazy">
+        </div>
+
+        <div class="gallery-item">
+          <img src="e1.jpeg" alt="Exotic stone collection" loading="lazy">
+        </div>
+
+        <div class="gallery-item">
+          <img src="p1.jpeg" alt="Patagonia collection" loading="lazy">
+        </div>
+
+        <div class="gallery-item">
+          <img src="e2.jpeg" alt="Natural exotic stone" loading="lazy">
+        </div>
+
+      </div>
+
+      <div class="gallery-controls">
+        <button class="gallery-arrow" id="galleryPrev" aria-label="Previous images">←</button>
+        <div class="gallery-dots" id="galleryDots">
+          <button class="active" aria-label="Gallery position 1"></button>
+          <button aria-label="Gallery position 2"></button>
+          <button aria-label="Gallery position 3"></button>
+          <button aria-label="Gallery position 4"></button>
+        </div>
+        <button class="gallery-arrow" id="galleryNext" aria-label="Next images">→</button>
+      </div>
+
+      <p class="gallery-note" id="galleryNote">
+        Explore our natural stone selection
+      </p>
+
+    </div>
+
+    <div class="product-names reveal">
+      <span>Titanium Gold</span>
+      <span>Patagonia</span>
+      <span>Cosmic Black</span>
+      <span>Titanium Black</span>
+      <span>Udaipur Green Marble</span>
+      <span>Rajasthan Green Granite</span>
+      <span>Rose Heritage</span>
+      <span>Signature Rose</span>
+      <span>Silver Earth</span>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- PROJECTS -->
+
+<section class="section projects-section" id="projects">
+
+  <div class="container">
+
+    <div class="section-heading reveal">
+      <div class="eyebrow">OUR PROJECTS</div>
+      <h2>Iconic Spaces Worldwide</h2>
+      <p>
+        Natural stone solutions for residential, commercial and hospitality spaces.
+      </p>
+    </div>
+
+    <!-- Replace these illustrative photos with actual Mount Exports projects -->
+
+    <div class="project-grid">
+
+      <article class="project-card reveal">
+        <img
+          src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=85"
+          alt="Luxury residential architectural application"
+          loading="lazy">
+        <div class="project-overlay">
+          <h3>Residential Spaces</h3>
+        </div>
+      </article>
+
+      <article class="project-card reveal">
+        <img
+          src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1000&q=85"
+          alt="Luxury hospitality interior application"
+          loading="lazy">
+        <div class="project-overlay">
+          <h3>Luxury Interiors</h3>
+        </div>
+      </article>
+
+      <article class="project-card reveal">
+        <img
+          src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=85"
+          alt="Luxury architectural exterior application"
+          loading="lazy">
+        <div class="project-overlay">
+          <h3>Architectural Exteriors</h3>
+        </div>
+      </article>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- INFRASTRUCTURE -->
+
+<section class="infrastructure-section" id="infrastructure">
+
+  <div class="container">
+
+    <div class="section-heading reveal">
+      <div class="eyebrow">OUR INFRASTRUCTURE</div>
+      <h2>From Quarry to Finished Stone</h2>
+      <p>
+        A dedicated approach to natural stone sourcing and processing.
+      </p>
+    </div>
+
+    <div class="infra-grid">
+
+      <article class="infra-card reveal">
+        <div class="infra-number">01 / OUR QUARRY</div>
+        <h3>Own Titanium Gold Quarry</h3>
+        <p>
+          Mount Exports has its own quarry for Titanium Gold, supporting
+          direct sourcing, selective block grading and supply continuity.
+        </p>
+        <div class="infra-detail">
+          TITANIUM GOLD · OWN QUARRY · RAJASTHAN
+        </div>
+      </article>
+
+      <article class="infra-card reveal">
+        <div class="infra-number">02 / PROCESSING UNIT</div>
+        <h3>Jain Grani Marmo</h3>
+        <p>
+          Our dedicated processing unit in Udaipur supports gangsaw cutting,
+          edge dressing and epoxy resin processing for natural stone.
+        </p>
+        <div class="infra-detail">
+          GANGSAW CUTTING · EDGE DRESSING · EPOXY RESIN LINE
+        </div>
+      </article>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ABOUT / WHY CHOOSE -->
+
+<section class="section why-section mountain-bg" id="about">
+
+  <div class="container">
+
+    <div class="section-heading reveal">
+      <div class="eyebrow">WHY CHOOSE MOUNT EXPORTS</div>
+      <h2>A Legacy Carved in Natural Stone</h2>
+    </div>
+
+    <p class="about-copy reveal">
+      Established in 1996 and based in Udaipur, Rajasthan, Mount Exports
+      specializes in Indian Marble, Granite, Patagonia and other Exotic Colours.
+      With our own Titanium Gold quarry and dedicated processing capabilities,
+      we bring India's distinctive natural stones to international buyers.
+    </p>
+
+    <div class="why-grid">
+
+      <article class="why-card reveal">
+        <svg class="why-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4">
+          <path d="M24 5L43 16L24 43L5 16L24 5Z"/>
+          <path d="M5 16H43M24 5L17 16L24 43L31 16L24 5Z"/>
+        </svg>
+        <h3>Premium Quality</h3>
+        <p>Carefully selected natural stones</p>
+      </article>
+
+      <article class="why-card reveal">
+        <svg class="why-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4">
+          <path d="M24 5L43 15L24 25L5 15L24 5Z"/>
+          <path d="M5 24L24 34L43 24M5 33L24 43L43 33"/>
+        </svg>
+        <h3>Wide Range</h3>
+        <p>Marble, Granite & Exotic Stones</p>
+      </article>
+
+      <article class="why-card reveal">
+        <svg class="why-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4">
+          <circle cx="24" cy="24" r="19"/>
+          <path d="M5 24H43M24 5C13 16 13 32 24 43M24 5C35 16 35 32 24 43M8 14H40M8 34H40"/>
+        </svg>
+        <h3>Global Supply</h3>
+        <p>Indian natural stones for global buyers</p>
+      </article>
+
+      <article class="why-card reveal">
+        <svg class="why-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4">
+          <path d="M4 25L15 14L24 19L33 14L44 25L36 33L31 29L24 36L17 30L12 34L4 25Z"/>
+          <path d="M15 14L21 9L29 9L33 14M17 30L22 25M24 36L29 31M31 29L35 25"/>
+        </svg>
+        <h3>Trusted Partner</h3>
+        <p>Over 28 years of industry experience</p>
+      </article>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="contact-section" id="contact">
+
+  <div class="container">
+
+    <div class="contact-grid">
+
+      <div class="contact-left reveal">
+
+        <div class="eyebrow">ENQUIRE NOW</div>
+
+        <h2>Let's Build Something<br>Extraordinary</h2>
+
+        <p>
+          Get in touch for product details, pricing and export enquiries.
+          Our team is ready to assist with your natural stone requirements.
+        </p>
+
+        <div class="contact-details">
+
+          <a href="tel:+919828040343">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+              <path d="M22 16.9V20a2 2 0 0 1-2.2 2A19.8 19.8 0 0 1 3 5.2 2 2 0 0 1 5 3h3a2 2 0 0 1 2 1.7l.5 3a2 2 0 0 1-.6 1.8L8 11a16 16 0 0 0 5 5l1.5-1.9a2 2 0 0 1 1.8-.6l3 .5a2 2 0 0 1 1.7 1.9Z"/>
+            </svg>
+            +91 98280 40343
+          </a>
+
+          <a href="https://wa.me/919829241343" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+              <path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20l1.2-5.2A8.5 8.5 0 1 1 21 11.5Z"/>
+              <path d="M9 9c1 3 3 5 6 6l1-1"/>
+            </svg>
+            +91 98292 41343
+          </a>
+
+          <a href="mailto:bhagwatisarwa@yahoo.com">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+              <rect x="3" y="5" width="18" height="14" rx="1"/>
+              <path d="M3 7L12 13L21 7"/>
+            </svg>
+            bhagwatisarwa@yahoo.com
+          </a>
+
+          <div>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+              <path d="M20 10C20 16 12 22 12 22S4 16 4 10a8 8 0 1 1 16 0Z"/>
+              <circle cx="12" cy="10" r="2.5"/>
+            </svg>
+            351, Second Floor, S. M. Lodha Complex,
+            Near Shastri Circle, Udaipur, Rajasthan 313001
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <form class="enquiry-form reveal" id="enquiryForm">
+
+        <input type="text" id="clientName" placeholder="Your Name" required>
+
+        <input type="email" id="clientEmail" placeholder="Email Address" required>
+
+        <input type="tel" id="clientPhone" placeholder="Phone Number" required>
+
+        <select id="clientProduct" required>
+          <option value="" disabled selected>Select Product</option>
+          <option>Marble</option>
+          <option>Granite</option>
+          <option>Patagonia</option>
+          <option>Titanium Gold</option>
+          <option>Cosmic Black</option>
+          <option>Titanium Black</option>
+          <option>Udaipur Green Marble</option>
+          <option>Rajasthan Green Granite</option>
+          <option>Rose Heritage</option>
+          <option>Signature Rose</option>
+          <option>Silver Earth</option>
+          <option>Other Exotic Stones</option>
+        </select>
+
+        <input type="text" id="clientCountry" placeholder="Destination Country">
+
+        <input type="text" id="clientQuantity" placeholder="Required Quantity / Containers">
+
+        <textarea id="clientMessage" placeholder="Your Message / Product Requirements"></textarea>
+
+        <div class="submit-wrap">
+          <button type="submit" class="submit-btn">
+            Send Enquiry&nbsp; →
+          </button>
+          <p class="form-note">
+            Your enquiry will open in WhatsApp for direct communication.
+          </p>
+        </div>
+
+      </form>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+
+<footer class="footer">
+
+  <div class="container">
+
+    <div class="footer-inner">
+
+      <a href="#home" class="brand footer-brand">
+        <div class="brand-logo">
+          <svg viewBox="0 0 100 46" fill="none">
+            <path d="M8 39 L43 6 L61 24 L71 14 L96 39"
+              stroke="#9b713d" stroke-width="4"/>
+            <path d="M34 39 L43 30 L52 39"
+              stroke="#9b713d" stroke-width="3"/>
+            <path d="M57 39 L71 26 L84 39"
+              stroke="#9b713d" stroke-width="3"/>
+          </svg>
+          <span class="brand-name">MOUNT EXPORTS</span>
+          <span class="brand-tagline">MARBLE | GRANITE | PATAGONIA | EXOTIC STONE</span>
+        </div>
+      </a>
+
+      <nav class="footer-nav">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#products">Products</a>
+        <a href="#projects">Projects</a>
+        <a href="#infrastructure">Infrastructure</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="socials">
+
+        <a href="https://instagram.com/mountexports07" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <rect x="3" y="3" width="18" height="18" rx="5"/>
+            <circle cx="12" cy="12" r="4"/>
+            <circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/>
+          </svg>
+        </a>
+
+        <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M13.5 21v-8h2.7l.4-3h-3.1V8.1c0-.9.3-1.5 1.6-1.5h1.7V4c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3V10H7.3v3h2.8v8h3.4Z"/>
+          </svg>
+        </a>
+
+        <a href="https://www.linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M5 3.5a2 2 0 1 0 0 4 2 2 0 0 0 0-4ZM3.5 9h3v11h-3V9Zm5.2 0h2.9v1.5h.1c.4-.8 1.5-1.8 3.2-1.8 3.4 0 4 2.2 4 5.1V20h-3v-5.5c0-1.3 0-2.9-1.8-2.9s-2.1 1.4-2.1 2.8V20h-3V9Z"/>
+          </svg>
+        </a>
+
+        <a href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="YouTube">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M23 7s-.2-1.6-.9-2.3c-.9-.9-1.9-.9-2.4-1C16.4 3.5 12 3.5 12 3.5h-.1s-4.3 0-7.7.2c-.5.1-1.5.1-2.4 1C1.1 5.4 1 7 1 7S.7 8.9.7 10.8v1.8c0 1.9.3 3.8.3 3.8s.2 1.6.9 2.3c.9.9 2.1.9 2.7 1C6.5 20 12 20 12 20s4.4 0 7.8-.3c.5-.1 1.5-.1 2.4-1 .7-.7.9-2.3.9-2.3s.2-1.9.2-3.8v-1.8C23.3 8.9 23 7 23 7ZM9.7 14.9V8.3l5.9 3.3-5.9 3.3Z"/>
+          </svg>
+        </a>
+
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Mount Exports. All Rights Reserved.</span>
+      <span>Established 1996 · Udaipur, Rajasthan, India</span>
+    </div>
+
+  </div>
+</footer>
+
+
+<!-- FLOATING WHATSAPP & CALL -->
+
+<div class="floating-contact">
+
+  <a href="https://wa.me/919829241343"
+     class="float-btn whatsapp-btn"
+     target="_blank"
+     rel="noopener"
+     aria-label="Contact on WhatsApp">
+
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+      <path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20l1.2-5.2A8.5 8.5 0 1 1 21 11.5Z"/>
+      <path d="M9 9c1 3 3 5 6 6l1-1"/>
+    </svg>
+
+  </a>
+
+  <a href="tel:+919828040343"
+     class="float-btn call-btn"
+     aria-label="Call Mount Exports">
+
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+      <path d="M22 16.9V20a2 2 0 0 1-2.2 2A19.8 19.8 0 0 1 3 5.2 2 2 0 0 1 5 3h3a2 2 0 0 1 2 1.7l.5 3a2 2 0 0 1-.6 1.8L8 11a16 16 0 0 0 5 5l1.5-1.9a2 2 0 0 1 1.8-.6l3 .5a2 2 0 0 1 1.7 1.9Z"/>
+    </svg>
+
+  </a>
+
+</div>
+
+
+<script>
+
+/* MOBILE NAVIGATION */
+
+const menuToggle = document.getElementById("menuToggle");
+const navMenu = document.getElementById("navMenu");
+
+menuToggle.addEventListener("click", () => {
+  const isOpen = navMenu.classList.toggle("open");
+  menuToggle.setAttribute("aria-expanded", String(isOpen));
+});
+
+document.querySelectorAll(".nav-menu a").forEach(link => {
+  link.addEventListener("click", () => {
+    navMenu.classList.remove("open");
+    menuToggle.setAttribute("aria-expanded", "false");
+  });
+});
+
+
+/* CATEGORY FILTERING */
+
+const categoryCards = document.querySelectorAll(".category-card");
+const galleryTrack = document.getElementById("galleryTrack");
+const galleryDots = document.getElementById("galleryDots");
+const galleryNote = document.getElementById("galleryNote");
+
+const stoneCollections = {
+
+  marble: [
+    "marble1.jpeg",
+    "marble2.jpeg"
+  ],
+
+  granite: [
+    "g1.jpeg",
+    "g2.jpeg"
+  ],
+
+  patagonia: [
+    "p1.jpeg",
+    "p2.jpeg"
+  ],
+
+  exotic: [
+    "e1.jpeg",
+    "e2.jpeg",
+    "e3.jpeg",
+    "e4.jpeg",
+    "e5.jpeg",
+    "e6.jpeg",
+    "e7.jpeg",
+    "e8.jpeg",
+    "e9.jpeg"
+  ]
+
+};
+
+const categoryNames = {
+  marble: "Marble Collection",
+  granite: "Granite Collection",
+  patagonia: "Patagonia Collection",
+  exotic: "Exotic Stone Collection"
+};
+
+function renderGallery(category) {
+
+  const images = category
+    ? stoneCollections[category]
+    : [
+        "marble1.jpeg",
+        "g1.jpeg",
+        "e1.jpeg",
+        "p1.jpeg",
+        "e2.jpeg"
+      ];
+
+  galleryTrack.innerHTML = "";
+
+  images.forEach((image, index) => {
+
+    const item = document.createElement("div");
+    item.className = "gallery-item";
+
+    const img = document.createElement("img");
+    img.src = image;
+    img.alt = (categoryNames[category] || "Featured natural stone") + " " + (index + 1);
+    img.loading = "lazy";
+
+    item.appendChild(img);
+    galleryTrack.appendChild(item);
+
+  });
+
+  galleryTrack.scrollLeft = 0;
+
+  galleryNote.textContent = category
+    ? categoryNames[category]
+    : "Explore our natural stone selection";
+
+  updateDots();
+
+}
+
+categoryCards.forEach(card => {
+
+  card.addEventListener("click", () => {
+
+    const category = card.dataset.category;
+
+    categoryCards.forEach(c => c.classList.remove("active"));
+    card.classList.add("active");
+
+    renderGallery(category);
+
+    document.querySelector(".featured-section").scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    });
+
+  });
+
+});
+
+
+/* GALLERY NAVIGATION */
+
+function getGalleryStep() {
+  const item = galleryTrack.querySelector(".gallery-item");
+  if (!item) return 200;
+
+  return item.getBoundingClientRect().width + 10;
+}
+
+document.getElementById("galleryNext").addEventListener("click", () => {
+
+  galleryTrack.scrollBy({
+    left: getGalleryStep() * 2,
+    behavior: "smooth"
+  });
+
+});
+
+document.getElementById("galleryPrev").addEventListener("click", () => {
+
+  galleryTrack.scrollBy({
+    left: -getGalleryStep() * 2,
+    behavior: "smooth"
+  });
+
+});
+
+function updateDots() {
+
+  const buttons = galleryDots.querySelectorAll("button");
+
+  buttons.forEach((button, index) => {
+
+    button.classList.toggle("active", index === 0);
+
+    button.onclick = () => {
+
+      const items = galleryTrack.querySelectorAll(".gallery-item");
+
+      if (!items.length) return;
+
+      const targetIndex = Math.min(
+        index * Math.max(1, Math.ceil(items.length / 4)),
+        items.length - 1
+      );
+
+      galleryTrack.scrollTo({
+        left: items[targetIndex].offsetLeft - galleryTrack.offsetLeft,
+        behavior: "smooth"
+      });
+
+      buttons.forEach(b => b.classList.remove("active"));
+      button.classList.add("active");
+
+    };
+
+  });
+
+}
+
+galleryTrack.addEventListener("scroll", () => {
+
+  const buttons = galleryDots.querySelectorAll("button");
+
+  const maxScroll = galleryTrack.scrollWidth - galleryTrack.clientWidth;
+
+  const progress = maxScroll > 0
+    ? galleryTrack.scrollLeft / maxScroll
+    : 0;
+
+  const activeIndex = Math.min(
+    buttons.length - 1,
+    Math.round(progress * (buttons.length - 1))
+  );
+
+  buttons.forEach((button, index) => {
+    button.classList.toggle("active", index === activeIndex);
+  });
+
+});
+
+
+/* WHATSAPP ENQUIRY FORM */
+
+document.getElementById("enquiryForm").addEventListener("submit", function(e) {
+
+  e.preventDefault();
+
+  const name = document.getElementById("clientName").value.trim();
+  const email = document.getElementById("clientEmail").value.trim();
+  const phone = document.getElementById("clientPhone").value.trim();
+  const product = document.getElementById("clientProduct").value;
+  const country = document.getElementById("clientCountry").value.trim();
+  const quantity = document.getElementById("clientQuantity").value.trim();
+  const message = document.getElementById("clientMessage").value.trim();
+
+  const whatsappMessage =
+
+`MOUNT EXPORTS - INTERNATIONAL ENQUIRY
+
+Name: ${name}
+Email: ${email}
+Phone: ${phone}
+
+Product Interest: ${product}
+Destination Country: ${country || "Not specified"}
+Required Quantity: ${quantity || "Not specified"}
+
+Additional Requirements:
+${message || "No additional message"}
+
+Website: Mount Exports
+Established: 1996
+Udaipur, Rajasthan, India`;
+
+  const whatsappURL =
+    "https://wa.me/919829241343?text=" +
+    encodeURIComponent(whatsappMessage);
+
+  window.open(whatsappURL, "_blank", "noopener,noreferrer");
+
+});
+
+
+/* SCROLL REVEAL */
+
+const observer = new IntersectionObserver((entries) => {
+
+  entries.forEach(entry => {
+
+    if (entry.isIntersecting) {
+      entry.target.classList.add("visible");
+      observer.unobserve(entry.target);
+    }
+
+  });
+
+}, {
+  threshold: 0.12
+});
+
+document.querySelectorAll(".reveal").forEach(element => {
+  observer.observe(element);
+});
+
+
+/* CURRENT YEAR */
+
+document.getElementById("year").textContent =
+  new Date().getFullYear();
+
+</script>
+
+</body>
+</html>
