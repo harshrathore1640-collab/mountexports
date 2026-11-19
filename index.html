@@ -1261,6 +1261,21 @@ body { background:#fff; }
 }
 @media (max-width:370px) { .category-card img { height:145px; } .category-footer h3{font-size:12px;} }
 
+
+/* HERO TEXT CONTRAST — CLEAR WHITE TYPE OVER DARK VIDEO */
+.hero-content { isolation: isolate; }
+.hero-label,
+.hero h1,
+.hero-description {
+  color: #ffffff !important;
+  text-shadow: 0 2px 5px rgba(0,0,0,.88), 0 5px 18px rgba(0,0,0,.72) !important;
+}
+.hero-label { font-weight: 700; }
+.hero h1 { font-weight: 700; }
+.hero-description { font-weight: 500; }
+
+/* Images and hero video are intentionally eager-loaded throughout this page. */
+
 </style>
 </head>
 
@@ -1310,8 +1325,7 @@ body { background:#fff; }
 
 <section class="hero" id="home">
 
-  <video class="hero-video"
-    autoplay muted loop playsinline preload="metadata"
+  <video class="hero-video" autoplay muted loop playsinline preload="auto" fetchpriority="high">
     <source src="one.mp4" type="video/mp4">
   </video>
 
@@ -1347,7 +1361,7 @@ body { background:#fff; }
     <div class="category-grid">
 
       <article class="category-card reveal" data-category="marble">
-        <img src="marble1.jpeg" alt="Premium Indian Marble" loading="lazy">
+        <img src="marble1.jpeg" alt="Premium Indian Marble">
         <div class="category-footer">
           <span class="category-symbol">◈</span>
           <h3>Marble</h3>
@@ -1356,7 +1370,7 @@ body { background:#fff; }
       </article>
 
       <article class="category-card reveal" data-category="granite">
-        <img src="g1.jpeg" alt="Natural Indian Granite" loading="lazy">
+        <img src="g1.jpeg" alt="Natural Indian Granite">
         <div class="category-footer">
           <span class="category-symbol">◈</span>
           <h3>Granite</h3>
@@ -1365,7 +1379,7 @@ body { background:#fff; }
       </article>
 
       <article class="category-card reveal" data-category="patagonia">
-        <img src="p1.png" alt="Exotic Patagonia Quartzite" loading="lazy">
+        <img src="p1.png" alt="Exotic Patagonia Quartzite">
         <div class="category-footer">
           <span class="category-symbol">◈</span>
           <h3>Patagonia</h3>
@@ -1374,7 +1388,7 @@ body { background:#fff; }
       </article>
 
       <article class="category-card reveal" data-category="exotic">
-        <img src="e1.png" alt="Exotic Natural Stones" loading="lazy">
+        <img src="e1.png" alt="Exotic Natural Stones">
         <div class="category-footer">
           <span class="category-symbol">◈</span>
           <h3>Exotic Stone</h3>
@@ -1404,23 +1418,23 @@ body { background:#fff; }
       <div class="gallery-track" id="galleryTrack">
 
         <div class="gallery-item">
-          <img src="marble1.jpeg" alt="Marble collection" loading="lazy">
+          <img src="marble1.jpeg" alt="Marble collection">
         </div>
 
         <div class="gallery-item">
-          <img src="g1.jpeg" alt="Granite collection" loading="lazy">
+          <img src="g1.jpeg" alt="Granite collection">
         </div>
 
         <div class="gallery-item">
-          <img src="e1.png" alt="Exotic stone collection" loading="lazy">
+          <img src="e1.png" alt="Exotic stone collection">
         </div>
 
         <div class="gallery-item">
-          <img src="p1.png" alt="Patagonia collection" loading="lazy">
+          <img src="p1.png" alt="Patagonia collection">
         </div>
 
         <div class="gallery-item">
-          <img src="e2.png" alt="Natural exotic stone" loading="lazy">
+          <img src="e2.png" alt="Natural exotic stone">
         </div>
 
       </div>
@@ -1470,7 +1484,7 @@ body { background:#fff; }
 
     <div class="space-grid">
       <article class="space-card reveal">
-        <img src="residential1.png" alt="Natural stone in a luxury residential space" loading="lazy">
+        <img src="residential1.png" alt="Natural stone in a luxury residential space">
         <div class="space-card-content">
           <span>01 / RESIDENTIAL COLLECTION</span>
           <h3>Residential Spaces</h3>
@@ -1480,7 +1494,7 @@ body { background:#fff; }
       </article>
 
       <article class="space-card reveal">
-        <img src="interior1.png" alt="Natural stone in a luxury interior" loading="lazy">
+        <img src="interior1.png" alt="Natural stone in a luxury interior">
         <div class="space-card-content">
           <span>02 / LUXURY INTERIOR COLLECTION</span>
           <h3>Luxury Interiors</h3>
@@ -1955,8 +1969,6 @@ function renderGallery(category) {
     const img = document.createElement("img");
     img.src = image;
     img.alt = (categoryNames[category] || "Featured natural stone") + " " + (index + 1);
-    img.loading = "lazy";
-
     item.appendChild(img);
     galleryTrack.appendChild(item);
 
@@ -2148,7 +2160,7 @@ document.querySelectorAll("[data-space]").forEach(button => {
     spaceModalTitle.textContent = collection.title;
     spaceModalDescription.textContent = collection.description;
     spaceModalGrid.innerHTML = collection.images.map((src, index) => `
-      <figure><img src="${src}" alt="${collection.title} inspiration ${index + 1}" loading="lazy"><figcaption>${collection.title} · Image ${index + 1}</figcaption></figure>
+      <figure><img src="${src}" alt="${collection.title} inspiration ${index + 1}"><figcaption>${collection.title} · Image ${index + 1}</figcaption></figure>
     `).join("");
     spaceModal.classList.add("open");
     spaceModal.setAttribute("aria-hidden", "false");
