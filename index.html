@@ -10,7 +10,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 :root {
@@ -1276,6 +1276,50 @@ body { background:#fff; }
 
 /* Images and hero video are intentionally eager-loaded throughout this page. */
 
+
+/* PREMIUM WHITE + WARM BROWN DESIGN SYSTEM */
+:root {--bg:#fff;--bg-light:#f5efea;--brown:#39251c;--brown-light:#79523d;--gold:#986344;--gold-light:#c69d83;--border:#e1d1c5;--text:#352820;--muted:#725e52;--sans:'Manrope',Arial,sans-serif;}
+body {font-size:15px;line-height:1.7;letter-spacing:.005em;}
+.header,.nav-menu.open {background:rgba(255,255,255,.98);}
+.nav-menu a,.footer-nav a {font-family:var(--sans);font-size:13px;font-weight:700;letter-spacing:.01em;}
+.section-heading {text-align:center;max-width:850px;margin-left:auto;margin-right:auto;}
+.section-heading h2 {font-size:clamp(32px,3.6vw,48px);line-height:1.17;letter-spacing:-.025em;}
+.section-heading p,.about-copy,.space-card-content p,.infra-card p,.contact-left p,.review-feature p,.faq-item p {font-family:var(--sans);font-size:14px;line-height:1.85;}
+.eyebrow {font-size:11px;letter-spacing:2.3px;font-weight:800;}
+.hero-label {font-family:var(--sans);font-size:12px;}
+.hero-description {font-family:var(--sans);font-size:17px;line-height:1.75;}
+.primary-btn,.outline-btn,.submit-btn {font-family:var(--sans);font-weight:700;letter-spacing:.01em;}
+.products-section,.projects-section,.faq-section {background:#fff;}
+.featured-section,.why-section {background:#f6f0eb;}
+.infrastructure-section,.reviews-section {background:#e9d9cd;}
+.contact-section,.hero-action-wrap {background:#e7d4c6;}
+.footer {background:#f8f3ef;}
+.category-card,.space-card {background:#faf6f2;border-color:#dfc9b9;}
+.category-card:focus-visible,.product-tab:focus-visible,.gallery-arrow:focus-visible,.outline-btn:focus-visible {outline:3px solid var(--gold);outline-offset:3px;}
+.category-footer h3,.space-card-content h3 {letter-spacing:-.02em;}
+.products-action {display:flex;justify-content:center;margin-top:36px;}
+.product-modal-panel {width:min(1160px,100%);border-radius:8px;box-shadow:0 28px 90px rgba(25,15,10,.25);}
+.product-tabs {display:flex;justify-content:center;flex-wrap:wrap;gap:9px;margin:0 0 28px;}
+.product-tab {border:1px solid var(--border);background:#fff;color:var(--brown);padding:10px 17px;border-radius:3px;cursor:pointer;font:700 12px var(--sans);}
+.product-tab.active,.product-tab:hover {background:var(--brown);color:#fff;border-color:var(--brown);}
+.space-modal-grid {gap:20px;}
+.space-modal-grid figure {background:#f9f4ef;border:1px solid var(--border);overflow:hidden;}
+.space-modal-grid img {height:280px;object-fit:cover;}
+.space-modal-grid figcaption {padding:16px 18px;font:600 15px/1.5 var(--sans);color:var(--brown);}
+.caption-category {display:block;font:800 10px var(--sans);letter-spacing:1.8px;text-transform:uppercase;color:var(--gold);margin-bottom:6px;}
+.space-modal-grid figcaption strong {display:block;font-weight:700;}
+.gallery-track {display:flex !important;grid-template-columns:none !important;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;scroll-behavior:smooth;padding-bottom:4px;}
+.gallery-track::-webkit-scrollbar {display:none;}
+.gallery-item {flex:0 0 calc((100% - 64px)/5);min-width:0;height:230px;position:relative;scroll-snap-align:start;border-radius:5px;cursor:default;}
+.gallery-item img {height:100%;}
+.gallery-item::after {content:"";position:absolute;inset:40% 0 0;background:linear-gradient(transparent,rgba(26,16,10,.74));pointer-events:none;}
+.gallery-item figcaption {position:absolute;z-index:1;bottom:15px;left:12px;right:12px;color:#fff;font:700 12px/1.4 var(--sans);}
+.gallery-arrow:disabled {opacity:.3;cursor:not-allowed;transform:none;}
+.gallery-dots button {width:8px;height:8px;}
+.space-card-content p {max-width:none;}
+@media(max-width:950px){.gallery-item{flex-basis:calc((100% - 32px)/3);height:220px;}}
+@media(max-width:700px){.section-heading h2{font-size:clamp(29px,7vw,38px);}.section-heading p,.space-card-content p{font-size:13px;}.gallery-item{flex-basis:78%;height:235px;}.space-modal-grid img{height:225px;}.product-modal-panel{padding:42px 16px 22px;}.product-tab{padding:9px 11px;font-size:11px;}.hero-description{font-size:14px;}}
+
 </style>
 </head>
 
@@ -1397,10 +1441,21 @@ body { background:#fff; }
       </article>
 
     </div>
-
+    <div class="products-action"><button type="button" class="primary-btn" id="exploreAllProducts">Explore All Products <span>→</span></button></div>
   </div>
 </section>
 
+<!-- PRODUCT COLLECTION MODAL -->
+<div class="space-modal" id="productModal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="productModalTitle">
+ <div class="space-modal-panel product-modal-panel" tabindex="-1">
+  <button class="space-modal-close" type="button" id="productModalClose" aria-label="Close product collection">×</button>
+  <div class="eyebrow">THE MOUNT EXPORTS COLLECTION</div>
+  <h2 id="productModalTitle">Explore Our Natural Stones</h2>
+  <p id="productModalDescription">Discover distinctive surfaces selected for remarkable spaces.</p>
+  <div class="product-tabs" id="productTabs" aria-label="Filter stone collections"></div>
+  <div class="space-modal-grid" id="productModalGrid"></div>
+ </div>
+</div>
 
 <!-- FEATURED COLLECTION -->
 
@@ -1484,11 +1539,11 @@ body { background:#fff; }
 
     <div class="space-grid">
       <article class="space-card reveal">
-        <img src="residential1.png" alt="Natural stone in a luxury residential space">
+        <img src="residential11.png" alt="Natural stone in a luxury residential space">
         <div class="space-card-content">
           <span>01 / RESIDENTIAL COLLECTION</span>
           <h3>Residential Spaces</h3>
-          <p>Bring natural textures, lasting character and understated elegance into the spaces you call home.</p>
+          <p>From inviting living rooms and elegant entryways to kitchens, bathrooms and staircases, our natural stones introduce warm textures, beautiful movement and lasting character to every corner of your home.</p>
           <button class="outline-btn" type="button" data-space="residential">View More <span>→</span></button>
         </div>
       </article>
@@ -1498,7 +1553,7 @@ body { background:#fff; }
         <div class="space-card-content">
           <span>02 / LUXURY INTERIOR COLLECTION</span>
           <h3>Luxury Interiors</h3>
-          <p>Discover statement surfaces and carefully selected stones for hospitality and sophisticated interiors.</p>
+          <p>Create memorable feature walls, statement counters, sophisticated hotel lobbies and bespoke commercial spaces with distinctive stones that bring depth, drama and refined architectural character.</p>
           <button class="outline-btn" type="button" data-space="interiors">View More <span>→</span></button>
         </div>
       </article>
@@ -1902,190 +1957,54 @@ document.querySelectorAll(".nav-menu a").forEach(link => {
 });
 
 
-/* CATEGORY FILTERING */
-
-const categoryCards = document.querySelectorAll(".category-card");
-const galleryTrack = document.getElementById("galleryTrack");
-const galleryDots = document.getElementById("galleryDots");
-const galleryNote = document.getElementById("galleryNote");
-
+/* PRODUCT COLLECTIONS — INDEPENDENT OF FEATURED SLIDER */
 const stoneCollections = {
-
-  marble: [
-    "marble1.jpeg",
-    "marble2.jpeg"
-  ],
-
-  granite: [
-    "g1.jpeg",
-    "g2.jpeg"
-  ],
-
-  patagonia: [
-    "p1.png",
-    "p2.png"
-  ],
-
-  exotic: [
-    "e1.png",
-    "e2.png",
-    "e3.png",
-    "e4.png",
-    "e5.png",
-    "e6.png",
-    "e7.png",
-    "e8.png",
-    "e9.png"
-  ]
-
+ marble: {name:"Marble", intro:"Timeless elegance, gentle veining and beautifully expressive surfaces for sophisticated spaces.", images:["marble1.jpeg","marble2.jpeg"], captions:["Timeless Marble Elegance","Natural Veining, Refined Beauty"]},
+ granite: {name:"Granite", intro:"Confident natural textures and enduring character for contemporary architectural statements.", images:["g1.jpeg","g2.jpeg"], captions:["Strength in Every Detail","Distinctive Granite Character"]},
+ patagonia: {name:"Patagonia", intro:"Dramatic movement and striking natural patterns designed to become the centrepiece of a space.", images:["p1.png","p2.png"], captions:["Nature's Boldest Expression","A Statement in Every Slab"]},
+ exotic: {name:"Exotic Stone", intro:"Rare-looking patterns, rich tonal contrasts and extraordinary natural individuality.", images:["e1.png","e2.png","e3.png","e4.png","e5.png","e6.png","e7.png","e8.png","e9.png"], captions:["A World of Natural Wonder","Artistry Beyond the Ordinary","Expressive Earth Tones","A Distinctive Stone Story","Nature's Signature Patterns","Refined Organic Movement","Extraordinary Surface Detail","Character in Every Vein","An Unmistakable Statement"]}
 };
-
-const categoryNames = {
-  marble: "Marble Collection",
-  granite: "Granite Collection",
-  patagonia: "Patagonia Collection",
-  exotic: "Exotic Stone Collection"
-};
-
-function renderGallery(category) {
-
-  const images = category
-    ? stoneCollections[category]
-    : [
-        "marble1.jpeg",
-        "g1.jpeg",
-        "e1.png",
-        "p1.png",
-        "e2.png"
-      ];
-
-  galleryTrack.innerHTML = "";
-
-  images.forEach((image, index) => {
-
-    const item = document.createElement("div");
-    item.className = "gallery-item";
-
-    const img = document.createElement("img");
-    img.src = image;
-    img.alt = (categoryNames[category] || "Featured natural stone") + " " + (index + 1);
-    item.appendChild(img);
-    galleryTrack.appendChild(item);
-
-  });
-
-  galleryTrack.scrollLeft = 0;
-
-  galleryNote.textContent = category
-    ? categoryNames[category]
-    : "Explore our natural stone selection";
-
-  updateDots();
-
+const productModal=document.getElementById("productModal");
+const productModalPanel=productModal.querySelector(".product-modal-panel");
+const productTabs=document.getElementById("productTabs");
+const productModalGrid=document.getElementById("productModalGrid");
+let activeProductTrigger=null;
+function renderProducts(category="all") {
+ const keys=category==="all"?Object.keys(stoneCollections):[category];
+ productTabs.innerHTML="";
+ [["all","All Stones"],...Object.entries(stoneCollections).map(([key,value])=>[key,value.name])].forEach(([key,name])=>{
+  const btn=document.createElement("button");btn.type="button";btn.className="product-tab"+(key===category?" active":"");btn.textContent=name;btn.setAttribute("aria-pressed",String(key===category));btn.addEventListener("click",()=>renderProducts(key));productTabs.appendChild(btn);
+ });
+ document.getElementById("productModalTitle").textContent=category==="all"?"Explore Our Natural Stones":stoneCollections[category].name+" Collection";
+ document.getElementById("productModalDescription").textContent=category==="all"?"Discover marble, granite, Patagonia and exotic stones — each with its own distinctive character.":stoneCollections[category].intro;
+ productModalGrid.replaceChildren();
+ keys.forEach(key=>stoneCollections[key].images.forEach((src,index)=>{
+  const figure=document.createElement("figure");const img=document.createElement("img");img.src=src;img.alt=stoneCollections[key].name+" — "+stoneCollections[key].captions[index];img.loading="lazy";
+  const caption=document.createElement("figcaption");const small=document.createElement("span");small.className="caption-category";small.textContent=stoneCollections[key].name;const title=document.createElement("strong");title.textContent=stoneCollections[key].captions[index];caption.append(small,title);figure.append(img,caption);productModalGrid.appendChild(figure);
+ }));
+ productModalPanel.scrollTop=0;
 }
+function openProductModal(category="all",trigger=null){activeProductTrigger=trigger;renderProducts(category);productModal.classList.add("open");productModal.setAttribute("aria-hidden","false");document.body.style.overflow="hidden";document.getElementById("productModalClose").focus();}
+function closeProductModal(){productModal.classList.remove("open");productModal.setAttribute("aria-hidden","true");document.body.style.overflow="";activeProductTrigger?.focus();}
+document.querySelectorAll(".category-card").forEach(card=>{card.setAttribute("role","button");card.setAttribute("tabindex","0");const open=()=>openProductModal(card.dataset.category,card);card.addEventListener("click",open);card.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();open();}});});
+document.getElementById("exploreAllProducts").addEventListener("click",e=>openProductModal("all",e.currentTarget));
+document.getElementById("productModalClose").addEventListener("click",closeProductModal);
+productModal.addEventListener("click",e=>{if(e.target===productModal)closeProductModal();});
 
-categoryCards.forEach(card => {
-
-  card.addEventListener("click", () => {
-
-    const category = card.dataset.category;
-
-    categoryCards.forEach(c => c.classList.remove("active"));
-    card.classList.add("active");
-
-    renderGallery(category);
-
-    document.querySelector(".featured-section").scrollIntoView({
-      behavior: "smooth",
-      block: "start"
-    });
-
-  });
-
-});
-
-
-/* GALLERY NAVIGATION */
-
-function getGalleryStep() {
-  const item = galleryTrack.querySelector(".gallery-item");
-  if (!item) return 200;
-
-  return item.getBoundingClientRect().width + 10;
-}
-
-document.getElementById("galleryNext").addEventListener("click", () => {
-
-  galleryTrack.scrollBy({
-    left: getGalleryStep() * 2,
-    behavior: "smooth"
-  });
-
-});
-
-document.getElementById("galleryPrev").addEventListener("click", () => {
-
-  galleryTrack.scrollBy({
-    left: -getGalleryStep() * 2,
-    behavior: "smooth"
-  });
-
-});
-
-function updateDots() {
-
-  const buttons = galleryDots.querySelectorAll("button");
-
-  buttons.forEach((button, index) => {
-
-    button.classList.toggle("active", index === 0);
-
-    button.onclick = () => {
-
-      const items = galleryTrack.querySelectorAll(".gallery-item");
-
-      if (!items.length) return;
-
-      const targetIndex = Math.min(
-        index * Math.max(1, Math.ceil(items.length / 4)),
-        items.length - 1
-      );
-
-      galleryTrack.scrollTo({
-        left: items[targetIndex].offsetLeft - galleryTrack.offsetLeft,
-        behavior: "smooth"
-      });
-
-      buttons.forEach(b => b.classList.remove("active"));
-      button.classList.add("active");
-
-    };
-
-  });
-
-}
-
-galleryTrack.addEventListener("scroll", () => {
-
-  const buttons = galleryDots.querySelectorAll("button");
-
-  const maxScroll = galleryTrack.scrollWidth - galleryTrack.clientWidth;
-
-  const progress = maxScroll > 0
-    ? galleryTrack.scrollLeft / maxScroll
-    : 0;
-
-  const activeIndex = Math.min(
-    buttons.length - 1,
-    Math.round(progress * (buttons.length - 1))
-  );
-
-  buttons.forEach((button, index) => {
-    button.classList.toggle("active", index === activeIndex);
-  });
-
-});
-
+/* FEATURED COLLECTION — REAL HORIZONTAL SLIDER */
+const featuredItems=[
+ ["marble2.jpeg","The Beauty of Marble"],["g2.jpeg","Granite with Character"],["p2.png","Patagonia Statement"],["e3.png","Exotic Expressions"],
+ ["residential12.png","Residential Refinement"],["interior2.png","Interior Artistry"],["e5.png","Natural Stone Drama"],["residential14.png","Designed for Living"],
+ ["interior4.png","Luxury in Every Detail"],["e8.png","Distinctive Surfaces"],["residential15.png","Enduring Elegance"],["interior5.png","Architectural Inspiration"]
+];
+const galleryTrack=document.getElementById("galleryTrack");const galleryDots=document.getElementById("galleryDots");const galleryNote=document.getElementById("galleryNote");
+galleryTrack.replaceChildren();featuredItems.forEach(([src,caption])=>{const figure=document.createElement("figure");figure.className="gallery-item";const img=document.createElement("img");img.src=src;img.alt=caption;img.loading="lazy";const label=document.createElement("figcaption");label.textContent=caption;figure.append(img,label);galleryTrack.appendChild(figure);});
+function galleryMax(){return Math.max(0,galleryTrack.scrollWidth-galleryTrack.clientWidth);}
+function updateFeaturedControls(){const max=galleryMax();const pageWidth=Math.max(1,galleryTrack.clientWidth*.82);const pages=Math.max(1,Math.ceil(max/pageWidth)+1);galleryDots.replaceChildren();for(let i=0;i<pages;i++){const b=document.createElement("button");b.type="button";b.setAttribute("aria-label","Go to featured collection page "+(i+1));b.addEventListener("click",()=>galleryTrack.scrollTo({left:Math.min(max,i*pageWidth),behavior:"smooth"}));galleryDots.appendChild(b);}syncFeaturedControls();}
+function syncFeaturedControls(){const max=galleryMax();const buttons=[...galleryDots.children];const idx=max?Math.round(galleryTrack.scrollLeft/max*(buttons.length-1)):0;buttons.forEach((b,i)=>{b.classList.toggle("active",i===idx);b.setAttribute("aria-current",String(i===idx));});document.getElementById("galleryPrev").disabled=galleryTrack.scrollLeft<=2;document.getElementById("galleryNext").disabled=galleryTrack.scrollLeft>=max-2;galleryNote.textContent="Explore "+featuredItems.length+" curated natural stone and design inspirations";}
+document.getElementById("galleryPrev").addEventListener("click",()=>galleryTrack.scrollBy({left:-galleryTrack.clientWidth*.82,behavior:"smooth"}));
+document.getElementById("galleryNext").addEventListener("click",()=>galleryTrack.scrollBy({left:galleryTrack.clientWidth*.82,behavior:"smooth"}));
+galleryTrack.addEventListener("scroll",syncFeaturedControls,{passive:true});window.addEventListener("resize",updateFeaturedControls);requestAnimationFrame(updateFeaturedControls);
 
 /* WHATSAPP ENQUIRY FORM */
 
@@ -2133,16 +2052,8 @@ Udaipur, Rajasthan, India`;
 
 /* RESIDENTIAL & LUXURY INTERIOR IMAGE GALLERIES */
 const spaceCollections = {
-  residential: {
-    title: "Residential Spaces",
-    description: "Natural stone inspiration for considered living spaces.",
-    images: ["residential1.png", "residential2.png", "residential3.png", "residential4.png", "residential5.png"]
-  },
-  interiors: {
-    title: "Luxury Interiors",
-    description: "Statement stone surfaces for refined interior environments.",
-    images: ["interior1.png", "interior2.png", "interior3.png", "interior4.png", "interior5.png"]
-  }
+ residential: {title:"Residential Spaces",description:"From welcoming entrances and serene living rooms to expressive kitchens, bathrooms and stairways, discover how natural stone brings depth, warmth and lasting individuality into the home.",images:["residential11.png","residential12.png","residential13.png","residential14.png","residential15.png"],captions:["A Warm Welcome in Natural Stone","Everyday Living, Beautifully Elevated","A Refined Touch for Modern Homes","Timeless Details for Personal Spaces","Designed to Feel Like Home"]},
+ interiors: {title:"Luxury Interiors",description:"Explore natural stone across feature walls, statement counters, hotel lobbies, refined lounges and bespoke commercial interiors — where every surface becomes part of the design story.",images:["interior1.png","interior2.png","interior3.png","interior4.png","interior5.png"],captions:["An Entrance That Makes an Impression","Statement Surfaces, Exceptional Presence","A New Language of Interior Luxury","Textures That Define the Atmosphere","Architectural Elegance in Every Detail"]}
 };
 const spaceModal = document.getElementById("spaceModal");
 const spaceModalGrid = document.getElementById("spaceModalGrid");
@@ -2159,9 +2070,8 @@ document.querySelectorAll("[data-space]").forEach(button => {
     if (!collection) return;
     spaceModalTitle.textContent = collection.title;
     spaceModalDescription.textContent = collection.description;
-    spaceModalGrid.innerHTML = collection.images.map((src, index) => `
-      <figure><img src="${src}" alt="${collection.title} inspiration ${index + 1}"><figcaption>${collection.title} · Image ${index + 1}</figcaption></figure>
-    `).join("");
+    spaceModalGrid.replaceChildren();
+    collection.images.forEach((src,index)=>{const figure=document.createElement("figure");const img=document.createElement("img");img.src=src;img.loading="lazy";img.alt=collection.captions[index];const caption=document.createElement("figcaption");caption.textContent=collection.captions[index];figure.append(img,caption);spaceModalGrid.appendChild(figure);});
     spaceModal.classList.add("open");
     spaceModal.setAttribute("aria-hidden", "false");
     document.body.style.overflow = "hidden";
@@ -2169,7 +2079,7 @@ document.querySelectorAll("[data-space]").forEach(button => {
 });
 document.getElementById("spaceModalClose").addEventListener("click", closeSpaceModal);
 spaceModal.addEventListener("click", event => { if (event.target === spaceModal) closeSpaceModal(); });
-document.addEventListener("keydown", event => { if (event.key === "Escape" && spaceModal.classList.contains("open")) closeSpaceModal(); });
+document.addEventListener("keydown", event => { if (event.key === "Escape") { if(spaceModal.classList.contains("open")) closeSpaceModal(); if(productModal.classList.contains("open")) closeProductModal(); } });
 
 /* SCROLL REVEAL */
 
