@@ -1409,7 +1409,7 @@ body {font-size:15px;line-height:1.7;letter-spacing:.005em;}
 
 <section class="hero" id="home">
 
-  <video class="hero-video" autoplay muted loop playsinline preload="auto" fetchpriority="high">
+  <video class="hero-video" autoplay muted loop playsinline preload="fast" fetchpriority="high">
     <source src="one.mp4" type="video/mp4">
   </video>
 
@@ -2019,7 +2019,7 @@ function renderProducts(category="all") {
  document.getElementById("productModalDescription").textContent=category==="all"?"Discover marble, granite, Patagonia and exotic stones — each with its own distinctive character.":stoneCollections[category].intro;
  productModalGrid.replaceChildren();
  keys.forEach(key=>stoneCollections[key].images.forEach((src,index)=>{
-  const figure=document.createElement("figure");const img=document.createElement("img");img.src=src;img.alt=stoneCollections[key].name+" — "+stoneCollections[key].captions[index];img.loading="lazy";
+  const figure=document.createElement("figure");const img=document.createElement("img");img.src=src;img.alt=stoneCollections[key].name+" — "+stoneCollections[key].captions[index];img.loading="fast";
   const caption=document.createElement("figcaption");const small=document.createElement("span");small.className="caption-category";small.textContent=stoneCollections[key].name;const title=document.createElement("strong");title.textContent=stoneCollections[key].captions[index];caption.append(small,title);figure.append(img,caption);productModalGrid.appendChild(figure);
  }));
  productModalPanel.scrollTop=0;
@@ -2038,7 +2038,7 @@ const featuredItems=[
  ["interior4.png","Luxury in Every Detail"],["e8.png","Distinctive Surfaces"],["residential15.png","Enduring Elegance"],["interior5.png","Architectural Inspiration"]
 ];
 const galleryTrack=document.getElementById("galleryTrack");const galleryDots=document.getElementById("galleryDots");const galleryNote=document.getElementById("galleryNote");
-galleryTrack.replaceChildren();featuredItems.forEach(([src,caption])=>{const figure=document.createElement("figure");figure.className="gallery-item";const img=document.createElement("img");img.src=src;img.alt=caption;img.loading="lazy";const label=document.createElement("figcaption");label.textContent=caption;figure.append(img,label);galleryTrack.appendChild(figure);});
+galleryTrack.replaceChildren();featuredItems.forEach(([src,caption])=>{const figure=document.createElement("figure");figure.className="gallery-item";const img=document.createElement("img");img.src=src;img.alt=caption;img.loading="fast";const label=document.createElement("figcaption");label.textContent=caption;figure.append(img,label);galleryTrack.appendChild(figure);});
 function galleryMax(){return Math.max(0,galleryTrack.scrollWidth-galleryTrack.clientWidth);}
 function updateFeaturedControls(){const max=galleryMax();const pageWidth=Math.max(1,galleryTrack.clientWidth*.82);const pages=Math.max(1,Math.ceil(max/pageWidth)+1);galleryDots.replaceChildren();for(let i=0;i<pages;i++){const b=document.createElement("button");b.type="button";b.setAttribute("aria-label","Go to featured collection page "+(i+1));b.addEventListener("click",()=>galleryTrack.scrollTo({left:Math.min(max,i*pageWidth),behavior:"smooth"}));galleryDots.appendChild(b);}syncFeaturedControls();}
 function syncFeaturedControls(){const max=galleryMax();const buttons=[...galleryDots.children];const idx=max?Math.round(galleryTrack.scrollLeft/max*(buttons.length-1)):0;buttons.forEach((b,i)=>{b.classList.toggle("active",i===idx);b.setAttribute("aria-current",String(i===idx));});document.getElementById("galleryPrev").disabled=galleryTrack.scrollLeft<=2;document.getElementById("galleryNext").disabled=galleryTrack.scrollLeft>=max-2;galleryNote.textContent="Explore "+featuredItems.length+" curated natural stone and design inspirations";}
@@ -2111,7 +2111,7 @@ document.querySelectorAll("[data-space]").forEach(button => {
     spaceModalTitle.textContent = collection.title;
     spaceModalDescription.textContent = collection.description;
     spaceModalGrid.replaceChildren();
-    collection.images.forEach((src,index)=>{const figure=document.createElement("figure");const img=document.createElement("img");img.src=src;img.loading="lazy";img.alt=collection.captions[index];const caption=document.createElement("figcaption");caption.textContent=collection.captions[index];figure.append(img,caption);spaceModalGrid.appendChild(figure);});
+    collection.images.forEach((src,index)=>{const figure=document.createElement("figure");const img=document.createElement("img");img.src=src;img.loading="fast";img.alt=collection.captions[index];const caption=document.createElement("figcaption");caption.textContent=collection.captions[index];figure.append(img,caption);spaceModalGrid.appendChild(figure);});
     spaceModal.classList.add("open");
     spaceModal.setAttribute("aria-hidden", "false");
     document.body.style.overflow = "hidden";
