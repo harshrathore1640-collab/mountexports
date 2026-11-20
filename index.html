@@ -2034,8 +2034,8 @@ productModal.addEventListener("click",e=>{if(e.target===productModal)closeProduc
 /* FEATURED COLLECTION — REAL HORIZONTAL SLIDER */
 const featuredItems=[
  ["marble2.jpeg","The Beauty of Marble"],["g2.jpeg","Granite with Character"],["p2.png","Patagonia Statement"],["e3.png","Exotic Expressions"],
- ["residential2.png","Residential Refinement"],["interior2.png","Interior Artistry"],["e5.png","Natural Stone Drama"],["residential4.png","Designed for Living"],
- ["interior4.png","Luxury in Every Detail"],["e8.png","Distinctive Surfaces"],["residential5.png","Enduring Elegance"],["interior5.png","Architectural Inspiration"]
+ ["residential12.png","Residential Refinement"],["interior2.png","Interior Artistry"],["e5.png","Natural Stone Drama"],["residential14.png","Designed for Living"],
+ ["interior4.png","Luxury in Every Detail"],["e8.png","Distinctive Surfaces"],["residential15.png","Enduring Elegance"],["interior5.png","Architectural Inspiration"]
 ];
 const galleryTrack=document.getElementById("galleryTrack");const galleryDots=document.getElementById("galleryDots");const galleryNote=document.getElementById("galleryNote");
 galleryTrack.replaceChildren();featuredItems.forEach(([src,caption])=>{const figure=document.createElement("figure");figure.className="gallery-item";const img=document.createElement("img");img.src=src;img.alt=caption;img.loading="lazy";const label=document.createElement("figcaption");label.textContent=caption;figure.append(img,label);galleryTrack.appendChild(figure);});
