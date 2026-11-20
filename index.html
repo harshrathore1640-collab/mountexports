@@ -1320,6 +1320,45 @@ body {font-size:15px;line-height:1.7;letter-spacing:.005em;}
 @media(max-width:950px){.gallery-item{flex-basis:calc((100% - 32px)/3);height:220px;}}
 @media(max-width:700px){.section-heading h2{font-size:clamp(29px,7vw,38px);}.section-heading p,.space-card-content p{font-size:13px;}.gallery-item{flex-basis:78%;height:235px;}.space-modal-grid img{height:225px;}.product-modal-panel{padding:42px 16px 22px;}.product-tab{padding:9px 11px;font-size:11px;}.hero-description{font-size:14px;}}
 
+
+/* ROYAL ARCHITECTURAL REDESIGN — distinct side ornaments, no triangular placeholders */
+:root{--bg:#fff;--bg-light:#f8f5f2;--brown:#321c14;--brown-light:#62412f;--gold:#805035;--gold-light:#b18a6e;--border:#e1d5cb;--text:#2f241e;--muted:#66564d;}
+body{background:#fff;color:var(--text);}
+.header{background:rgba(255,255,255,.98);border-bottom:1px solid #e9ddd3;}
+.products-section,.projects-section,.faq-section{background:#fff;}
+.featured-section{background:#f7f2ed;}
+.infrastructure-section{background:#eee5dc;}
+.why-section{background:#fcfaf8;}
+.reviews-section{background:#f1e8e0;}
+.contact-section,.hero-action-wrap{background:#e7d8cc;}
+.footer{background:#f8f3ee;}
+.category-card,.space-card{background:#fffaf6;border-color:#e2d3c8;}
+.primary-btn,.submit-btn{background:#563321;}
+.primary-btn:hover,.submit-btn:hover{background:#301a12;}
+.section-heading h2{color:#321c14;}
+.section-heading{position:relative;z-index:2;}
+/* Remove every old mountain silhouette */
+.mountain-bg::before,.mountain-bg::after{content:none!important;display:none!important;}
+/* Side decoration is decorative and never covers actual content */
+.products-section,.featured-section,.projects-section,.infrastructure-section,.why-section,.reviews-section,.faq-section,.contact-section{position:relative;isolation:isolate;overflow:hidden;}
+.products-section::before,.products-section::after,.featured-section::before,.featured-section::after,.projects-section::before,.projects-section::after,.infrastructure-section::before,.infrastructure-section::after,.why-section::before,.why-section::after,.reviews-section::before,.reviews-section::after,.faq-section::before,.faq-section::after{content:'';position:absolute;pointer-events:none;z-index:-1;background-repeat:no-repeat;background-size:contain;opacity:.22;}
+.products-section::before,.products-section::after{width:175px;height:520px;top:8%;background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22220%22%20height%3D%22650%22%20viewBox%3D%220%200%20220%20650%22%3E%3Cg%20fill%3D%22none%22%20stroke%3D%22%23805b45%22%20stroke-width%3D%222%22%20opacity%3D%22.85%22%3E%3Cpath%20d%3D%22M10%20645H210M26%20635H194M42%20622H178M55%20610H165M57%20138H163M40%20127H180M28%20115H192M18%20100H202M44%2085Q110%203%20176%2085M68%2085Q110%2031%20152%2085%22%2F%3E%3Cpath%20d%3D%22M60%20150V610M160%20150V610M72%20150V610M148%20150V610%22%2F%3E%3Cpath%20d%3D%22M82%20152V606M96%20152V606M110%20152V606M124%20152V606M138%20152V606%22%20stroke-width%3D%221%22%2F%3E%3Cpath%20d%3D%22M28%20115Q43%2085%2060%20115M60%20115Q77%2085%2094%20115M94%20115Q110%2085%20126%20115M126%20115Q143%2085%20160%20115M160%20115Q177%2085%20192%20115%22%2F%3E%3Cpath%20d%3D%22M50%20145Q110%20168%20170%20145M50%20607Q110%20589%20170%20607%22%2F%3E%3Cpath%20d%3D%22M110%206V45M93%2026L110%208L127%2026M10%20645H210%22%2F%3E%3C%2Fg%3E%3Cg%20fill%3D%22%23805b45%22%20opacity%3D%22.09%22%3E%3Cpath%20d%3D%22M62%20153H158V607H62Z%22%2F%3E%3Cpath%20d%3D%22M40%20117H180V136H40Z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");}
+.products-section::before{left:-63px;}.products-section::after{right:-63px;transform:scaleX(-1);}
+.featured-section::before,.featured-section::after{width:190px;height:460px;top:3%;background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22260%22%20height%3D%22650%22%20viewBox%3D%220%200%20260%20650%22%3E%3Cg%20fill%3D%22none%22%20stroke%3D%22%23875d47%22%20opacity%3D%22.6%22%20stroke-width%3D%222%22%3E%3Cpath%20d%3D%22M0%2035Q75%2068%2040%20130T90%20270T55%20410T130%20620%22%2F%3E%3Cpath%20d%3D%22M12%200Q120%20105%2078%20195T160%20365T110%20535T210%20650%22%2F%3E%3Cpath%20d%3D%22M80%200Q160%20110%20123%20210T220%20390T178%20570T260%20645%22%2F%3E%3Cpath%20d%3D%22M0%20230Q100%20245%20138%20185M55%20410Q165%20395%20205%20310M130%20620Q160%20555%20255%20530%22%20stroke-width%3D%221%22%2F%3E%3Cpath%20d%3D%22M40%20130L4%20162M90%20270L145%20300M160%20365L240%20342M110%20535L36%20565%22%20stroke-width%3D%221%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");opacity:.19;}
+.featured-section::before{left:-38px;}.featured-section::after{right:-38px;transform:scaleX(-1);}
+.projects-section::before,.projects-section::after{width:200px;height:480px;top:8%;background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22290%22%20height%3D%22620%22%20viewBox%3D%220%200%20290%20620%22%3E%3Cg%20fill%3D%22none%22%20stroke%3D%22%23815a40%22%20stroke-width%3D%222%22%20opacity%3D%22.85%22%3E%3Cpath%20d%3D%22M8%20620V170Q8%2016%20145%2016Q282%2016%20282%20170V620M25%20620V173Q25%2036%20145%2036Q265%2036%20265%20173V620M45%20620V177Q45%2058%20145%2058Q245%2058%20245%20177V620%22%2F%3E%3Cpath%20d%3D%22M25%20182H45M245%20182H265M8%20198H45M245%20198H282M8%20590H45M245%20590H282%22%2F%3E%3Cpath%20d%3D%22M8%20215H45M245%20215H282M17%20215V590M273%20215V590%22%2F%3E%3Cpath%20d%3D%22M75%20620V280Q75%20190%20145%20190Q215%20190%20215%20280V620%22%20stroke-width%3D%221%22%2F%3E%3Cpath%20d%3D%22M96%20620V285Q96%20212%20145%20212Q194%20212%20194%20285V620%22%20stroke-width%3D%221%22%2F%3E%3Ccircle%20cx%3D%22145%22%20cy%3D%22116%22%20r%3D%2222%22%2F%3E%3Cpath%20d%3D%22M145%2094V138M123%20116H167M129%20100L161%20132M161%20100L129%20132%22%20stroke-width%3D%221%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");opacity:.19;}
+.projects-section::before{left:-95px;}.projects-section::after{right:-95px;transform:scaleX(-1);}
+.infrastructure-section::before,.infrastructure-section::after{width:160px;height:440px;top:0;background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22220%22%20height%3D%22650%22%20viewBox%3D%220%200%20220%20650%22%3E%3Cg%20fill%3D%22none%22%20stroke%3D%22%23805b45%22%20stroke-width%3D%222%22%20opacity%3D%22.85%22%3E%3Cpath%20d%3D%22M10%20645H210M26%20635H194M42%20622H178M55%20610H165M57%20138H163M40%20127H180M28%20115H192M18%20100H202M44%2085Q110%203%20176%2085M68%2085Q110%2031%20152%2085%22%2F%3E%3Cpath%20d%3D%22M60%20150V610M160%20150V610M72%20150V610M148%20150V610%22%2F%3E%3Cpath%20d%3D%22M82%20152V606M96%20152V606M110%20152V606M124%20152V606M138%20152V606%22%20stroke-width%3D%221%22%2F%3E%3Cpath%20d%3D%22M28%20115Q43%2085%2060%20115M60%20115Q77%2085%2094%20115M94%20115Q110%2085%20126%20115M126%20115Q143%2085%20160%20115M160%20115Q177%2085%20192%20115%22%2F%3E%3Cpath%20d%3D%22M50%20145Q110%20168%20170%20145M50%20607Q110%20589%20170%20607%22%2F%3E%3Cpath%20d%3D%22M110%206V45M93%2026L110%208L127%2026M10%20645H210%22%2F%3E%3C%2Fg%3E%3Cg%20fill%3D%22%23805b45%22%20opacity%3D%22.09%22%3E%3Cpath%20d%3D%22M62%20153H158V607H62Z%22%2F%3E%3Cpath%20d%3D%22M40%20117H180V136H40Z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");opacity:.14;}
+.infrastructure-section::before{left:-75px;}.infrastructure-section::after{right:-75px;transform:scaleX(-1);}
+.why-section::before,.why-section::after{width:185px;height:440px;top:0;background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22290%22%20height%3D%22620%22%20viewBox%3D%220%200%20290%20620%22%3E%3Cg%20fill%3D%22none%22%20stroke%3D%22%23815a40%22%20stroke-width%3D%222%22%20opacity%3D%22.85%22%3E%3Cpath%20d%3D%22M8%20620V170Q8%2016%20145%2016Q282%2016%20282%20170V620M25%20620V173Q25%2036%20145%2036Q265%2036%20265%20173V620M45%20620V177Q45%2058%20145%2058Q245%2058%20245%20177V620%22%2F%3E%3Cpath%20d%3D%22M25%20182H45M245%20182H265M8%20198H45M245%20198H282M8%20590H45M245%20590H282%22%2F%3E%3Cpath%20d%3D%22M8%20215H45M245%20215H282M17%20215V590M273%20215V590%22%2F%3E%3Cpath%20d%3D%22M75%20620V280Q75%20190%20145%20190Q215%20190%20215%20280V620%22%20stroke-width%3D%221%22%2F%3E%3Cpath%20d%3D%22M96%20620V285Q96%20212%20145%20212Q194%20212%20194%20285V620%22%20stroke-width%3D%221%22%2F%3E%3Ccircle%20cx%3D%22145%22%20cy%3D%22116%22%20r%3D%2222%22%2F%3E%3Cpath%20d%3D%22M145%2094V138M123%20116H167M129%20100L161%20132M161%20100L129%20132%22%20stroke-width%3D%221%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");opacity:.17;}
+.why-section::before{left:-90px;}.why-section::after{right:-90px;transform:scaleX(-1);}
+.reviews-section::before,.reviews-section::after{width:180px;height:460px;top:0;background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22260%22%20height%3D%22650%22%20viewBox%3D%220%200%20260%20650%22%3E%3Cg%20fill%3D%22none%22%20stroke%3D%22%23875d47%22%20opacity%3D%22.6%22%20stroke-width%3D%222%22%3E%3Cpath%20d%3D%22M0%2035Q75%2068%2040%20130T90%20270T55%20410T130%20620%22%2F%3E%3Cpath%20d%3D%22M12%200Q120%20105%2078%20195T160%20365T110%20535T210%20650%22%2F%3E%3Cpath%20d%3D%22M80%200Q160%20110%20123%20210T220%20390T178%20570T260%20645%22%2F%3E%3Cpath%20d%3D%22M0%20230Q100%20245%20138%20185M55%20410Q165%20395%20205%20310M130%20620Q160%20555%20255%20530%22%20stroke-width%3D%221%22%2F%3E%3Cpath%20d%3D%22M40%20130L4%20162M90%20270L145%20300M160%20365L240%20342M110%20535L36%20565%22%20stroke-width%3D%221%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");opacity:.15;}
+.reviews-section::before{left:-70px;}.reviews-section::after{right:-70px;transform:scaleX(-1);}
+.faq-section::before,.faq-section::after{width:170px;height:440px;top:0;background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22220%22%20height%3D%22650%22%20viewBox%3D%220%200%20220%20650%22%3E%3Cg%20fill%3D%22none%22%20stroke%3D%22%23805b45%22%20stroke-width%3D%222%22%20opacity%3D%22.85%22%3E%3Cpath%20d%3D%22M10%20645H210M26%20635H194M42%20622H178M55%20610H165M57%20138H163M40%20127H180M28%20115H192M18%20100H202M44%2085Q110%203%20176%2085M68%2085Q110%2031%20152%2085%22%2F%3E%3Cpath%20d%3D%22M60%20150V610M160%20150V610M72%20150V610M148%20150V610%22%2F%3E%3Cpath%20d%3D%22M82%20152V606M96%20152V606M110%20152V606M124%20152V606M138%20152V606%22%20stroke-width%3D%221%22%2F%3E%3Cpath%20d%3D%22M28%20115Q43%2085%2060%20115M60%20115Q77%2085%2094%20115M94%20115Q110%2085%20126%20115M126%20115Q143%2085%20160%20115M160%20115Q177%2085%20192%20115%22%2F%3E%3Cpath%20d%3D%22M50%20145Q110%20168%20170%20145M50%20607Q110%20589%20170%20607%22%2F%3E%3Cpath%20d%3D%22M110%206V45M93%2026L110%208L127%2026M10%20645H210%22%2F%3E%3C%2Fg%3E%3Cg%20fill%3D%22%23805b45%22%20opacity%3D%22.09%22%3E%3Cpath%20d%3D%22M62%20153H158V607H62Z%22%2F%3E%3Cpath%20d%3D%22M40%20117H180V136H40Z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");opacity:.12;}
+.faq-section::before{left:-90px;}.faq-section::after{right:-90px;transform:scaleX(-1);}
+@media(max-width:900px){.products-section::before,.products-section::after,.featured-section::before,.featured-section::after,.projects-section::before,.projects-section::after,.infrastructure-section::before,.infrastructure-section::after,.why-section::before,.why-section::after,.reviews-section::before,.reviews-section::after,.faq-section::before,.faq-section::after{opacity:.09;width:120px;}}
+@media(max-width:600px){.products-section::before,.products-section::after,.featured-section::before,.featured-section::after,.projects-section::before,.projects-section::after,.infrastructure-section::before,.infrastructure-section::after,.why-section::before,.why-section::after,.reviews-section::before,.reviews-section::after,.faq-section::before,.faq-section::after{opacity:.07;width:90px;}}
+
 </style>
 </head>
 
@@ -1405,7 +1444,7 @@ body {font-size:15px;line-height:1.7;letter-spacing:.005em;}
     <div class="category-grid">
 
       <article class="category-card reveal" data-category="marble">
-        <img src="marble1.jpeg" alt="Premium Indian Marble">
+        <img loading="eager" decoding="async" src="marble1.jpeg" alt="Premium Indian Marble">
         <div class="category-footer">
           <span class="category-symbol">◈</span>
           <h3>Marble</h3>
@@ -1414,7 +1453,7 @@ body {font-size:15px;line-height:1.7;letter-spacing:.005em;}
       </article>
 
       <article class="category-card reveal" data-category="granite">
-        <img src="g1.jpeg" alt="Natural Indian Granite">
+        <img loading="eager" decoding="async" src="g1.jpeg" alt="Natural Indian Granite">
         <div class="category-footer">
           <span class="category-symbol">◈</span>
           <h3>Granite</h3>
@@ -1423,7 +1462,7 @@ body {font-size:15px;line-height:1.7;letter-spacing:.005em;}
       </article>
 
       <article class="category-card reveal" data-category="patagonia">
-        <img src="p1.png" alt="Exotic Patagonia Quartzite">
+        <img loading="eager" decoding="async" src="p1.png" alt="Exotic Patagonia Quartzite">
         <div class="category-footer">
           <span class="category-symbol">◈</span>
           <h3>Patagonia</h3>
@@ -1432,7 +1471,7 @@ body {font-size:15px;line-height:1.7;letter-spacing:.005em;}
       </article>
 
       <article class="category-card reveal" data-category="exotic">
-        <img src="e1.png" alt="Exotic Natural Stones">
+        <img loading="eager" decoding="async" src="e1.png" alt="Exotic Natural Stones">
         <div class="category-footer">
           <span class="category-symbol">◈</span>
           <h3>Exotic Stone</h3>
@@ -1473,23 +1512,23 @@ body {font-size:15px;line-height:1.7;letter-spacing:.005em;}
       <div class="gallery-track" id="galleryTrack">
 
         <div class="gallery-item">
-          <img src="marble1.jpeg" alt="Marble collection">
+          <img loading="eager" decoding="async" src="marble1.jpeg" alt="Marble collection">
         </div>
 
         <div class="gallery-item">
-          <img src="g1.jpeg" alt="Granite collection">
+          <img loading="eager" decoding="async" src="g1.jpeg" alt="Granite collection">
         </div>
 
         <div class="gallery-item">
-          <img src="e1.png" alt="Exotic stone collection">
+          <img loading="eager" decoding="async" src="e1.png" alt="Exotic stone collection">
         </div>
 
         <div class="gallery-item">
-          <img src="p1.png" alt="Patagonia collection">
+          <img loading="eager" decoding="async" src="p1.png" alt="Patagonia collection">
         </div>
 
         <div class="gallery-item">
-          <img src="e2.png" alt="Natural exotic stone">
+          <img loading="eager" decoding="async" src="e2.png" alt="Natural exotic stone">
         </div>
 
       </div>
@@ -1539,7 +1578,7 @@ body {font-size:15px;line-height:1.7;letter-spacing:.005em;}
 
     <div class="space-grid">
       <article class="space-card reveal">
-        <img src="residential11.png" alt="Natural stone in a luxury residential space">
+        <img loading="eager" decoding="async" src="residential1.png" alt="Natural stone in a luxury residential space">
         <div class="space-card-content">
           <span>01 / RESIDENTIAL COLLECTION</span>
           <h3>Residential Spaces</h3>
@@ -1549,7 +1588,7 @@ body {font-size:15px;line-height:1.7;letter-spacing:.005em;}
       </article>
 
       <article class="space-card reveal">
-        <img src="interior1.png" alt="Natural stone in a luxury interior">
+        <img loading="eager" decoding="async" src="interior1.png" alt="Natural stone in a luxury interior">
         <div class="space-card-content">
           <span>02 / LUXURY INTERIOR COLLECTION</span>
           <h3>Luxury Interiors</h3>
@@ -1979,7 +2018,7 @@ function renderProducts(category="all") {
  document.getElementById("productModalDescription").textContent=category==="all"?"Discover marble, granite, Patagonia and exotic stones — each with its own distinctive character.":stoneCollections[category].intro;
  productModalGrid.replaceChildren();
  keys.forEach(key=>stoneCollections[key].images.forEach((src,index)=>{
-  const figure=document.createElement("figure");const img=document.createElement("img");img.src=src;img.alt=stoneCollections[key].name+" — "+stoneCollections[key].captions[index];img.loading="lazy";
+  const figure=document.createElement("figure");const img=document.createElement("img");img.loading="eager";img.src=src;img.alt=stoneCollections[key].name+" — "+stoneCollections[key].captions[index];img.loading="eager";
   const caption=document.createElement("figcaption");const small=document.createElement("span");small.className="caption-category";small.textContent=stoneCollections[key].name;const title=document.createElement("strong");title.textContent=stoneCollections[key].captions[index];caption.append(small,title);figure.append(img,caption);productModalGrid.appendChild(figure);
  }));
  productModalPanel.scrollTop=0;
@@ -1994,11 +2033,11 @@ productModal.addEventListener("click",e=>{if(e.target===productModal)closeProduc
 /* FEATURED COLLECTION — REAL HORIZONTAL SLIDER */
 const featuredItems=[
  ["marble2.jpeg","The Beauty of Marble"],["g2.jpeg","Granite with Character"],["p2.png","Patagonia Statement"],["e3.png","Exotic Expressions"],
- ["residential12.png","Residential Refinement"],["interior2.png","Interior Artistry"],["e5.png","Natural Stone Drama"],["residential14.png","Designed for Living"],
- ["interior4.png","Luxury in Every Detail"],["e8.png","Distinctive Surfaces"],["residential15.png","Enduring Elegance"],["interior5.png","Architectural Inspiration"]
+ ["residential2.png","Residential Refinement"],["interior2.png","Interior Artistry"],["e5.png","Natural Stone Drama"],["residential4.png","Designed for Living"],
+ ["interior4.png","Luxury in Every Detail"],["e8.png","Distinctive Surfaces"],["residential5.png","Enduring Elegance"],["interior5.png","Architectural Inspiration"]
 ];
 const galleryTrack=document.getElementById("galleryTrack");const galleryDots=document.getElementById("galleryDots");const galleryNote=document.getElementById("galleryNote");
-galleryTrack.replaceChildren();featuredItems.forEach(([src,caption])=>{const figure=document.createElement("figure");figure.className="gallery-item";const img=document.createElement("img");img.src=src;img.alt=caption;img.loading="lazy";const label=document.createElement("figcaption");label.textContent=caption;figure.append(img,label);galleryTrack.appendChild(figure);});
+galleryTrack.replaceChildren();featuredItems.forEach(([src,caption])=>{const figure=document.createElement("figure");figure.className="gallery-item";const img=document.createElement("img");img.loading="eager";img.src=src;img.alt=caption;img.loading="eager";const label=document.createElement("figcaption");label.textContent=caption;figure.append(img,label);galleryTrack.appendChild(figure);});
 function galleryMax(){return Math.max(0,galleryTrack.scrollWidth-galleryTrack.clientWidth);}
 function updateFeaturedControls(){const max=galleryMax();const pageWidth=Math.max(1,galleryTrack.clientWidth*.82);const pages=Math.max(1,Math.ceil(max/pageWidth)+1);galleryDots.replaceChildren();for(let i=0;i<pages;i++){const b=document.createElement("button");b.type="button";b.setAttribute("aria-label","Go to featured collection page "+(i+1));b.addEventListener("click",()=>galleryTrack.scrollTo({left:Math.min(max,i*pageWidth),behavior:"smooth"}));galleryDots.appendChild(b);}syncFeaturedControls();}
 function syncFeaturedControls(){const max=galleryMax();const buttons=[...galleryDots.children];const idx=max?Math.round(galleryTrack.scrollLeft/max*(buttons.length-1)):0;buttons.forEach((b,i)=>{b.classList.toggle("active",i===idx);b.setAttribute("aria-current",String(i===idx));});document.getElementById("galleryPrev").disabled=galleryTrack.scrollLeft<=2;document.getElementById("galleryNext").disabled=galleryTrack.scrollLeft>=max-2;galleryNote.textContent="Explore "+featuredItems.length+" curated natural stone and design inspirations";}
@@ -2052,7 +2091,7 @@ Udaipur, Rajasthan, India`;
 
 /* RESIDENTIAL & LUXURY INTERIOR IMAGE GALLERIES */
 const spaceCollections = {
- residential: {title:"Residential Spaces",description:"From welcoming entrances and serene living rooms to expressive kitchens, bathrooms and stairways, discover how natural stone brings depth, warmth and lasting individuality into the home.",images:["residential11.png","residential12.png","residential13.png","residential14.png","residential15.png"],captions:["A Warm Welcome in Natural Stone","Everyday Living, Beautifully Elevated","A Refined Touch for Modern Homes","Timeless Details for Personal Spaces","Designed to Feel Like Home"]},
+ residential: {title:"Residential Spaces",description:"From welcoming entrances and serene living rooms to expressive kitchens, bathrooms and stairways, discover how natural stone brings depth, warmth and lasting individuality into the home.",images:["residential1.png","residential2.png","residential3.png","residential4.png","residential5.png"],captions:["A Warm Welcome in Natural Stone","Everyday Living, Beautifully Elevated","A Refined Touch for Modern Homes","Timeless Details for Personal Spaces","Designed to Feel Like Home"]},
  interiors: {title:"Luxury Interiors",description:"Explore natural stone across feature walls, statement counters, hotel lobbies, refined lounges and bespoke commercial interiors — where every surface becomes part of the design story.",images:["interior1.png","interior2.png","interior3.png","interior4.png","interior5.png"],captions:["An Entrance That Makes an Impression","Statement Surfaces, Exceptional Presence","A New Language of Interior Luxury","Textures That Define the Atmosphere","Architectural Elegance in Every Detail"]}
 };
 const spaceModal = document.getElementById("spaceModal");
@@ -2071,7 +2110,7 @@ document.querySelectorAll("[data-space]").forEach(button => {
     spaceModalTitle.textContent = collection.title;
     spaceModalDescription.textContent = collection.description;
     spaceModalGrid.replaceChildren();
-    collection.images.forEach((src,index)=>{const figure=document.createElement("figure");const img=document.createElement("img");img.src=src;img.loading="lazy";img.alt=collection.captions[index];const caption=document.createElement("figcaption");caption.textContent=collection.captions[index];figure.append(img,caption);spaceModalGrid.appendChild(figure);});
+    collection.images.forEach((src,index)=>{const figure=document.createElement("figure");const img=document.createElement("img");img.loading="eager";img.src=src;img.loading="eager";img.alt=collection.captions[index];const caption=document.createElement("figcaption");caption.textContent=collection.captions[index];figure.append(img,caption);spaceModalGrid.appendChild(figure);});
     spaceModal.classList.add("open");
     spaceModal.setAttribute("aria-hidden", "false");
     document.body.style.overflow = "hidden";
