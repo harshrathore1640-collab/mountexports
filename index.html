@@ -151,9 +151,10 @@ img {
   align-items: center;
 }
 
-.brand-logo svg {
-  width: 72px;
-  height: 33px;
+.brand-logo .custom-logo {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
   margin-bottom: -2px;
 }
 
@@ -999,8 +1000,7 @@ img {
 
 @media (max-width: 700px) {
   .header { height: 69px; }
-  .brand-logo svg { width: 61px; height: 28px; }
-  .brand-name { font-size: 17px; }
+.brand-logo .custom-logo { width: 35px; height: 35px; }  .brand-name { font-size: 17px; }
   .brand-tagline { font-size: 6px; }
   .menu-toggle { display: block; }
   .menu-toggle svg { width: 27px; height: 27px; }
@@ -1370,19 +1370,11 @@ body {font-size:15px;line-height:1.7;letter-spacing:.005em;}
 <header class="header">
   <div class="nav-wrap">
 
-    <a href="#home" class="brand">
-      <div class="brand-logo">
-        <svg viewBox="0 0 100 46" fill="none">
-          <path d="M8 39 L43 6 L61 24 L71 14 L96 39"
-            stroke="#9b713d" stroke-width="4" stroke-linecap="square"/>
-          <path d="M34 39 L43 30 L52 39"
-            stroke="#9b713d" stroke-width="3"/>
-          <path d="M57 39 L71 26 L84 39"
-            stroke="#9b713d" stroke-width="3"/>
-        </svg>
-        <span class="brand-name">MOUNT EXPORTS</span>
-        <span class="brand-tagline">MARBLE | GRANITE | PATAGONIA | EXOTIC STONE</span>
-      </div>
+  <div class="brand-logo">
+  <img src="logoo.png" alt="Mount Exports Logo" class="custom-logo">
+  <span class="brand-name">MOUNT EXPORTS</span>
+  <span class="brand-tagline">MARBLE | GRANITE | PATAGONIA | EXOTIC STONE</span>
+</div>
     </a>
 
     <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">
@@ -1870,18 +1862,11 @@ body {font-size:15px;line-height:1.7;letter-spacing:.005em;}
     <div class="footer-inner">
 
       <a href="#home" class="brand footer-brand">
-        <div class="brand-logo">
-          <svg viewBox="0 0 100 46" fill="none">
-            <path d="M8 39 L43 6 L61 24 L71 14 L96 39"
-              stroke="#9b713d" stroke-width="4"/>
-            <path d="M34 39 L43 30 L52 39"
-              stroke="#9b713d" stroke-width="3"/>
-            <path d="M57 39 L71 26 L84 39"
-              stroke="#9b713d" stroke-width="3"/>
-          </svg>
-          <span class="brand-name">MOUNT EXPORTS</span>
-          <span class="brand-tagline">MARBLE | GRANITE | PATAGONIA | EXOTIC STONE</span>
-        </div>
+       <div class="brand-logo">
+  <img src="logoo.png" alt="Mount Exports Logo" class="custom-logo">
+  <span class="brand-name">MOUNT EXPORTS</span>
+  <span class="brand-tagline">MARBLE | GRANITE | PATAGONIA | EXOTIC STONE</span>
+</div>
       </a>
 
       <nav class="footer-nav">
